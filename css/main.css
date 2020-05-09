@@ -511,7 +511,7 @@ body {
   top: -80px;
   width: 100%;
   height: calc(100% + 80px);
-  background: url(../img/main-block-bg.png);
+  background: url(../img/main-block-img.png);
   z-index: -1;
   background-size: 100%;
   background-repeat: no-repeat;
