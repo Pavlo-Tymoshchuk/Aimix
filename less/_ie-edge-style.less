@@ -1,0 +1,30 @@
+@media (min-width: 1200px) {
+    
+    @supports (-ms-ime-align:auto) {
+        .main-button{
+            &:hover {
+                background-color: #6F85EE;
+            }
+        }
+        
+        .button-else {
+            &:hover {
+                background-color: #F7F7F7;
+            }
+        }
+    }
+}
+
+ @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .main-button{
+        &:hover {
+            background-color: #6F85EE;
+        }
+    }
+    
+    .button-else {
+        &:hover {
+            background-color: #F7F7F7;
+        }
+    }
+}
