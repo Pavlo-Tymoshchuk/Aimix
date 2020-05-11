@@ -17,8 +17,20 @@
         }
     }
     
-    /* //General */
+    .look-else-button {
+        &:hover {
+            color: #6F85EE;
+            border-color: #6F85EE;
+        }
+    }
     
+    .audio-button {
+        &:hover {
+            color: #4D68EA;
+        }
+    }
+    
+    /* //General */
     
     /* Header */
     
@@ -77,4 +89,32 @@
     }
     
     /* //Call back */
+    
+    /* Popup */
+    
+    .close__popup {
+        &:hover {
+            &::before,
+            &::after {
+                background-color: #000000;
+            }
+        }
+    }
+    
+    .popup__socila-item {
+        &:hover {
+            color: #6F85EE;
+        }
+    }
+    
+    /* //Popup */
+    
+    /* Footer */
+    
+    .footer__item,
+    .footer__social-item {
+        &:hover {
+            color: #4D68EA;
+        }
+    }
 }
