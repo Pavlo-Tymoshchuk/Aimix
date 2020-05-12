@@ -184,7 +184,8 @@ document.addEventListener('DOMContentLoaded', function(){
             clearTimeout(timerId);
             clearTimeout(setTimMouseEnter);
             leftMouseMove = this.offsetLeft - e.clientX;
-            teamList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px)`);
+            let transition = Math.abs(leftMouseMove) / 10000;
+            teamList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px); transition: transform ${transition}s`);
         }
     });
     
