@@ -9,10 +9,15 @@
 <body>
     <header class="header">
         <div class="header__wrapper container">
+            <button class="header-burger"></button>
             <a href="#" class="header__logo">
                 <img src="./img/aimix-logo.svg" alt="Aimix">
             </a>
             <nav class="header__nav">
+                <button class="header__close-nav"></button>
+                <a href="#" class="header__logo header__logo-nav">
+                    <img src="./img/aimix-logo-white.svg" alt="Aimix">
+                </a>
                 <ul class="header__list">
                     <li class="header__item">
                         <a href="#" class="header__link">наши работы</a>
@@ -49,6 +54,36 @@
     </header>
     <main>
         <audio class="js-audio" loop autoplay="autoplay" data-src="./audio/I_Feel_Like_Partying_Right_Now.mp3"></audio>
+        <div class="fixed-navigation js-fixed-nav">
+            <div class="fixed-navigation__wrapper container">
+                <button class="audio-button js-audio-button">
+                    <span class="audio-decor-off">
+                        <span class="audio-decor-off__item"></span>
+                        <span class="audio-decor-off__item"></span>
+                        <span class="audio-decor-off__item"></span>
+                        <span class="audio-decor-off__item"></span>
+                    </span>
+                    <span class="text"></span>
+                </button>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="#" class="social-link">Facebook</a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link">Telegram</a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link">Viber</a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link">WhatsApp</a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link">Skype</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <section class="main-block">
             <div class="main-block__wrapper container">
                 <div class="decor-circle"></div>
@@ -227,10 +262,13 @@
                                     <label class="input__wrapper check__wrapper">
                                         <input type="checkbox" name="type-site" class="input-check">
                                         <span class="custome-checkbox"></span>
-                                        <span class="input-text">Лендинг</span>
+                                        <span class="input-text">
+                                            <span>Лендинг</span>
+                                            <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
+                                        </span>
                                     </label>
-                                    <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
                                     <div class="quiz__more-info js-info-block">
+                                        <span class="decor js-info-decor"></span>
                                         <p>Если вам нужно сделать проект быстрее, то цена будет увеличиваться, если же у вас есть больше времени, чем мы закладываем на выполнение - вас ждет скидка</p>
                                     </div>
                                 </div>
@@ -238,10 +276,13 @@
                                     <label class="input__wrapper check__wrapper">
                                         <input type="checkbox" name="type-site" class="input-check">
                                         <span class="custome-checkbox"></span>
-                                        <span class="input-text">Интернет-магазин</span>
+                                        <span class="input-text">
+                                            <span>Интернет-магазин</span>
+                                            <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
+                                        </span>
                                     </label>
-                                    <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
                                     <div class="quiz__more-info js-info-block">
+                                        <span class="decor js-info-decor"></span>
                                         <p>Если вам нужно сделать проект быстрее, то цена будет увеличиваться, если же у вас есть больше времени, чем мы закладываем на выполнение - вас ждет скидка</p>
                                     </div>
                                 </div>
@@ -249,10 +290,13 @@
                                     <label class="input__wrapper check__wrapper">
                                         <input type="checkbox" name="type-site" class="input-check">
                                         <span class="custome-checkbox"></span>
-                                        <span class="input-text">Ваш вариант</span>
+                                        <span class="input-text">
+                                            <span>Ваш вариант</span>
+                                            <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
+                                        </span>
                                     </label>
-                                    <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
                                     <div class="quiz__more-info js-info-block">
+                                        <span class="decor js-info-decor"></span>
                                         <p>Если вам нужно сделать проект быстрее, то цена будет увеличиваться, если же у вас есть больше времени, чем мы закладываем на выполнение - вас ждет скидка</p>
                                     </div>
                                 </div>
@@ -260,10 +304,13 @@
                                     <label class="input__wrapper check__wrapper">
                                         <input type="checkbox" name="type-site" class="input-check">
                                         <span class="custome-checkbox"></span>
-                                        <span class="input-text">Корпоративный</span>
+                                        <span class="input-text">
+                                            <span>Корпоративный</span>
+                                            <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
+                                        </span>
                                     </label>
-                                    <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
                                     <div class="quiz__more-info js-info-block">
+                                        <span class="decor js-info-decor"></span>
                                         <p>Если вам нужно сделать проект быстрее, то цена будет увеличиваться, если же у вас есть больше времени, чем мы закладываем на выполнение - вас ждет скидка</p>
                                     </div>
                                 </div>
@@ -271,10 +318,13 @@
                                     <label class="input__wrapper check__wrapper">
                                         <input type="checkbox" name="type-site" class="input-check">
                                         <span class="custome-checkbox"></span>
-                                        <span class="input-text">Уникальный</span>
+                                        <span class="input-text">
+                                            <span>Уникальный</span>
+                                            <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
+                                        </span>
                                     </label>
-                                    <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
                                     <div class="quiz__more-info js-info-block">
+                                        <span class="decor js-info-decor"></span>
                                         <p>Если вам нужно сделать проект быстрее, то цена будет увеличиваться, если же у вас есть больше времени, чем мы закладываем на выполнение - вас ждет скидка</p>
                                     </div>
                                 </div>
@@ -297,9 +347,12 @@
                                 </div>
                                 <div class="quiz__info__body">
                                     <div class="quiz__info__item js-drop-item js-position-wrapper">
-                                        <p class="quiz__info__type">выберите удобные для вас сроки (дни):</p>
-                                        <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
+                                        <p class="quiz__info__type">
+                                            <span>выберите удобные для вас сроки (дни):</span>
+                                            <button class="quiz-info-button js-drop-button js-position-info" type="button"></button>
+                                        </p>
                                         <div class="quiz__more-info js-info-block">
+                                            <span class="decor js-info-decor"></span>
                                             <p>Если вам нужно сделать проект быстрее, то цена будет увеличиваться, если же у вас есть больше времени, чем мы закладываем на выполнение - вас ждет скидка</p>
                                         </div>
                                     </div>
@@ -307,7 +360,7 @@
                                 </div>
                             </div>
                             <div class="quiz__form__footer">
-                                 <!-- <button class="button-else js-button-decor">
+                                 <!-- <button class="button-else js-button-decor" type="button">
                                     <span class="text">далее</span>
                                 </button>  -->
                                 <div class="quiz__form__price sale">
@@ -437,7 +490,7 @@
                             <p>Не нашли волнующий вас вопрос? <br>Вы можете задать его нам</p>
                         </div>
                         <button class="main-button main-button-dark js-button-decor">
-                            <span class="text">заказать</span>
+                            <span class="text">задать вопрос</span>
                         </button>
                     </div>
                     <div class="question__container">
@@ -456,6 +509,14 @@
                             </li>
                         </ul>
                         <button class="look-else-button js-button" data-target="question">смотреть еще</button>
+                        <div class="question-mobile-block question__info">
+                            <div class="question__info__text">
+                                <p>Не нашли волнующий вас вопрос? <br>Вы можете задать его нам</p>
+                            </div>
+                            <button class="main-button main-button-dark js-button-decor">
+                                <span class="text">задать вопрос</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -493,7 +554,7 @@
                     <p class="call-back__text">Текст о том, для чего нам писать</p>
                     <div class="call-back__links-wrapper">
                         <a href="mailto:info@aimix.space" class="call-back__link">info@aimix.space</a>
-                        <a href="tel: +38 (099) 055-33-31" class="call-back__link">+38 (099) 055-33-31</a>
+                        <a href="tel: +38 (099) 055-33-31" class="call-back__link call-back__link-phone">+38 (099) 055-33-31</a>
                     </div>
                 </div>
                 <div class="call-back__form-wrapper">
@@ -513,10 +574,16 @@
                             <span class="input-caption">задача проекта</span>
                             <textarea class="main-textarea"></textarea>
                         </label>
-                        <label class="input-file__wrapper">
-                            <input type="file" class="input-file">
-                            <span class="input-file__text">прикрепить файл </span>
-                        </label>
+                        <div class="call-back__file">
+                            <label class="input-file__wrapper">
+                                <input type="file" class="input-file js-input-file" onchange="previewFile()">
+                                <span class="input-file__text">прикрепить файл </span>
+                            </label>
+                            <div class="call-back__file__name js-input-text-wrapper">
+                                <p class="text js-input-text">Бриф на разра .docx</p>
+                                <button class="delete-file js-delete-file" type="button"></button>
+                            </div>
+                        </div>
                         <div class="call-back__form__footer">
                             <p class="text">Нажав на кнопку, соглашаюсь на обработку <a href="#" class="policy__link">персональных данных</a></p>
                             <button class="main-button call-back__button js-button-decor">
@@ -525,59 +592,65 @@
                         </div>
                     </form>
                 </div>
+                <div class="call-back__links-wrapper call-back__links-wrapper-mobile">
+                    <a href="mailto:info@aimix.space" class="call-back__link">info@aimix.space</a>
+                    <a href="tel: +38 (099) 055-33-31" class="call-back__link call-back__link-phone">+38 (099) 055-33-31</a>
+                </div>
             </div>
         </section>
         <section class="blog" style="background-image:url(./img/blog-bg.png)">
             <div class="blog__wrapper container">
                 <h5 class="general-caption">инфо</h5>
                 <h2 class="main-caption-l">наш блог</h2>
-                <ul class="blog__list">
-                    <li class="blog__item">
-                        <div class="blog__item__header">
-                            <div class="blog__item__info">
-                                <h5 class="general-caption general-caption-inner">технологии</h5>
-                                <h4 class="blog_item__caption">Apple проведет конференцию WWDC 202</h4>
+                <div class="position-wrapper">
+                    <ul class="blog__list blog__list-main">
+                        <li class="blog__item">
+                            <div class="blog__item__header">
+                                <div class="blog__item__info">
+                                    <h5 class="general-caption general-caption-inner">технологии</h5>
+                                    <h4 class="blog_item__caption">Apple проведет конференцию WWDC 202</h4>
+                                </div>
+                                <div class="blog_item__img">
+                                    <img src="./img/blog-img-1.png" alt="Картинка">
+                                </div>
                             </div>
-                            <div class="blog_item__img">
-                                <img src="./img/blog-img-1.png" alt="Картинка">
+                            <div class="blog__item__body">
+                                <p>Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</p>
                             </div>
-                        </div>
-                        <div class="blog__item__body">
-                            <p>Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</p>
-                        </div>
-                        <div class="blog__item__footer">06.05.2020</div>
-                    </li>
-                    <li class="blog__item">
-                        <div class="blog__item__header">
-                            <div class="blog__item__info">
-                                <h5 class="general-caption general-caption-inner">технологии</h5>
-                                <h4 class="blog_item__caption">Apple проведет конференцию WWDC 202</h4>
+                            <div class="blog__item__footer">06.05.2020</div>
+                        </li>
+                        <li class="blog__item">
+                            <div class="blog__item__header">
+                                <div class="blog__item__info">
+                                    <h5 class="general-caption general-caption-inner">технологии</h5>
+                                    <h4 class="blog_item__caption">Apple проведет конференцию WWDC 202</h4>
+                                </div>
+                                <div class="blog_item__img">
+                                    <img src="./img/blog-img-1.png" alt="Картинка">
+                                </div>
                             </div>
-                            <div class="blog_item__img">
-                                <img src="./img/blog-img-1.png" alt="Картинка">
+                            <div class="blog__item__body">
+                                <p>Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</p>
                             </div>
-                        </div>
-                        <div class="blog__item__body">
-                            <p>Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</p>
-                        </div>
-                        <div class="blog__item__footer">06.05.2020</div>
-                    </li>
-                    <li class="blog__item">
-                        <div class="blog__item__header">
-                            <div class="blog__item__info">
-                                <h5 class="general-caption general-caption-inner">технологии</h5>
-                                <h4 class="blog_item__caption">Apple проведет конференцию WWDC 202</h4>
+                            <div class="blog__item__footer">06.05.2020</div>
+                        </li>
+                        <li class="blog__item">
+                            <div class="blog__item__header">
+                                <div class="blog__item__info">
+                                    <h5 class="general-caption general-caption-inner">технологии</h5>
+                                    <h4 class="blog_item__caption">Apple проведет конференцию WWDC 202</h4>
+                                </div>
+                                <div class="blog_item__img">
+                                    <img src="./img/blog-img-1.png" alt="Картинка">
+                                </div>
                             </div>
-                            <div class="blog_item__img">
-                                <img src="./img/blog-img-1.png" alt="Картинка">
+                            <div class="blog__item__body">
+                                <p>Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</p>
                             </div>
-                        </div>
-                        <div class="blog__item__body">
-                            <p>Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</p>
-                        </div>
-                        <div class="blog__item__footer">06.05.2020</div>
-                    </li>
-                </ul>
+                            <div class="blog__item__footer">06.05.2020</div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="blog__button">
                     <a href="#" class="look-else-button">смотреть еще</a>
                 </div>
@@ -588,17 +661,17 @@
                 <h5 class="general-caption">seo</h5>
                 <h2 class="main-caption-l">СЕО-текст</h2>
                 <div class="seo-block__text">
-                    <div class="so-block__text__item">
+                    <div class="seo-block__text__item">
                         <p>В профессиональной сфере часто случается так, что личные или корпоративные клиенты заказывают, чтобы публикация была сделана и представлена еще тогда, когда фактическое содержание все еще не готово. Вспомните новостные блоги, где информация публикуется каждый час в живом порядке. Тем не менее, читатели склонны к тому, чтобы быть отвлеченными доступным контентом, скажем, любым текстом, который был скопирован из газеты или интернета. </p>
                     </div>
-                    <div class="so-block__text__item">
+                    <div class="seo-block__text__item">
                         <p>В профессиональной сфере часто случается так, что личные или корпоративные клиенты заказывают, чтобы публикация была сделана и представлена еще тогда, когда фактическое содержание все еще не готово. Вспомните новостные блоги, где информация публикуется каждый час в живом порядке. Тем не менее, читатели склонны к тому, чтобы быть отвлеченными доступным контентом, скажем, любым текстом, который был скопирован из газеты или интернета. </p>
                     </div>
-                    <div class="so-block__text__item">
+                    <div class="seo-block__text__item">
                         <h4>Они предпочитают сконцентрироваться на тексте</h4>
                         <p>В профессиональной сфере часто случается так, что личные или корпоративные клиенты заказывают, чтобы публикация была сделана и представлена еще тогда, когда фактическое содержание все еще не готово. Вспомните новостные блоги, где информация публикуется каждый час в живом порядке. Тем не менее, читатели склонны к тому, чтобы быть отвлеченными доступным контентом, скажем, любым текстом, который был скопирован из газеты или интернета. </p>
                     </div>
-                    <div class="so-block__text__item">
+                    <div class="seo-block__text__item">
                         <p>В профессиональной сфере часто случается так, что личные или корпоративные клиенты заказывают, чтобы публикация была сделана и представлена еще тогда, когда фактическое содержание все еще не готово. Вспомните новостные блоги, где информация публикуется каждый час в живом порядке. Тем не менее, читатели склонны к тому, чтобы быть отвлеченными доступным контентом, скажем, любым текстом, который был скопирован из газеты или интернета. </p>
                     </div>
                 </div>
@@ -701,7 +774,32 @@
             </ul>
         </div>
     </section>
+    <div class="button-to-top">
+        <button class="to-top">
+            <span class="icon-arrow"></span>
+        </button>
+    </div>
     <div class="overlay"></div>
     <script src="./js/main.js"></script>
+    <script>
+         // File 
+    
+        function previewFile() {
+            let textWrapper = document.querySelector('.js-input-text-wrapper');
+            let textInput = textWrapper.querySelector('.js-input-text');
+            let textDelete= textWrapper.querySelector('.js-delete-file');
+            let file = document.querySelector('.js-input-file').files[0];
+    
+            textInput.innerHTML = file.name;
+            textWrapper.classList.add('active');
+            
+            textDelete.addEventListener('click', function(){
+                textWrapper.classList.remove('active');
+                file.value = null;
+            });
+        }
+        
+        // File 
+    </script>
 </body>
 </html>

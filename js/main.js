@@ -121,18 +121,25 @@ document.addEventListener('DOMContentLoaded', function(){
         let item = e.target;
         
         if(item.closest(".js-position-info")) {
+            let buttonPosition = item.closest(".js-position-info").getBoundingClientRect();
+            let wrapper = item.closest(".js-position-wrapper");
+            let wrapperPosition = wrapper.getBoundingClientRect();
+            let infoBlock = wrapper.querySelector(".js-info-block");
+            let infoDecorElem = wrapper.querySelector(".js-info-decor");
+            
             if(window.innerWidth > 1025){
-                let buttonPosition = item.closest(".js-position-info").getBoundingClientRect();
-                let wrapper = item.closest(".js-position-wrapper");
-                let wrapperPosition = wrapper.getBoundingClientRect();
-                let infoBlock = wrapper.querySelector(".js-info-block");
-                infoBlock.style.left = (buttonPosition.left - wrapperPosition.left) - 30 + "px";
-            }else {
-                let buttonPosition = item.closest(".js-position-info").getBoundingClientRect();
-                let wrapper = item.closest(".js-position-wrapper");
-                let wrapperPosition = wrapper.getBoundingClientRect();
-                let infoBlock = wrapper.querySelector(".js-info-block");
-                infoBlock.style.right = (wrapperPosition.right - buttonPosition.right) - 20 + "px";
+                infoBlock.style.left = Math.floor((buttonPosition.left - wrapperPosition.left)) - 30 + "px";
+                return;
+            }
+            
+            if(window.innerWidth < 1025 && window.innerWidth > 767) {
+                infoBlock.style.right = Math.floor((wrapperPosition.right - buttonPosition.right)) - 20 + "px";
+                infoDecorElem.style.left = "auto";
+                return;
+            }
+            
+            if(window.innerWidth < 767) {
+                infoDecorElem.style.left = Math.floor((buttonPosition.left - wrapperPosition.left)) - 10 + "px";
             }
             
         }
@@ -145,13 +152,26 @@ document.addEventListener('DOMContentLoaded', function(){
     let teamWrapper = document.querySelector('.js-team-wrapper');
     let teamList = document.querySelector(".js-team-list");
     let allItem = teamList.querySelectorAll(".js-team-item");
-    let item = teamList.querySelector(".js-team-item").offsetWidth;
-    let widthList = item * allItem.length;
-    step = widthList / window.innerWidth;
+    let item = teamList.querySelector(".js-team-item");
+    let widthList = item.offsetWidth * allItem.length;
+    let step = widthList / window.innerWidth;
     let flag;
+    let timerId;
+    
+    let lastPositionElem = allItem[allItem.length - 1].offsetLeft;
+    
+    console.log(lastPositionElem);
+    
+    teamWrapper.addEventListener('mouseenter', function(e){
+        setTimeout(function(){
+            leftMouseMove = teamWrapper.offsetLeft - e.clientX;
+            teamList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px); transition: transform .6s`);
+        }, 100);
+        
+    });
     
     teamWrapper.addEventListener('mousemove', function(e){
-        let timerId = setTimeout(function(){
+        timerId = setTimeout(function(){
             flag = true;
         }, 500);
 
@@ -159,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function(){
             clearTimeout(timerId);
             leftMouseMove = this.offsetLeft - e.clientX;
             teamList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px)`);
+            console.log(lastPositionElem);
         }
     });
     
@@ -229,4 +250,60 @@ document.addEventListener('DOMContentLoaded', function(){
     });
     
     // //Turn on music
+    
+    // Scroll to top
+    
+    let wrapperToTop = document.querySelector('.button-to-top');
+    let buttonToTop = document.querySelector('.to-top');
+    
+    document.addEventListener('scroll', function(){
+        if(window.pageYOffset > 1000 && window.innerWidth < 1025) {
+            wrapperToTop.classList.add('show');
+        }else {
+            wrapperToTop.classList.remove('show');
+        }
+    });
+    
+    buttonToTop.addEventListener('click', function(){
+       window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    
+    // /Scroll to top
+    
+     // Header
+    
+    let burger = document.querySelector('.header-burger');
+    let burgerList = document.querySelector(".header__nav");
+    let burgerClose = document.querySelector('.header__close-nav');
+
+    burger.addEventListener('click', function(){
+        burgerList.classList.add("active");
+        document.querySelector('html').classList.add('overflow');
+    });
+
+    burgerClose.addEventListener('click', function(){
+        burgerList.classList.remove('active');
+        document.querySelector('html').classList.remove('overflow');
+    });
+
+    // /Header
+    
+    // Footer 
+    
+    let scrollTopChange = 0;
+    let maxScroll = document.body.offsetHeight - document.documentElement.clientHeight;
+    
+    document.addEventListener('scroll', function() {
+        let scrollTopCurrent = window.scrollY;
+        
+        if(scrollTopCurrent > maxScroll - 100) {
+            document.querySelector('.js-fixed-nav').classList.add('hide');
+        }else {
+            document.querySelector('.js-fixed-nav').classList.remove('hide');
+        }
+    });
+
 });
