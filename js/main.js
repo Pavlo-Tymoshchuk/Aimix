@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let teamWrapperStylePadding = parseFloat(teamWrapperStyle.paddingLeft);
     let margin = parseFloat(styleElem.marginRight);
     
-    let widthList = (item.offsetWidth + margin) * allItem.length + styleListMargin + teamWrapperStylePadding + 80;
+    let widthList = (item.offsetWidth + margin) * allItem.length + styleListMargin + teamWrapperStylePadding + 250;
     let step = (widthList - window.innerWidth) / window.innerWidth;
     let flag;
     let timerId;
