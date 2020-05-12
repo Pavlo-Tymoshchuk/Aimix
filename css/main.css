@@ -2044,6 +2044,15 @@ body {
   .our-team__wrapper::-webkit-scrollbar {
     display: none;
   }
+  .position-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .position-wrapper .our-works__list {
+    width: 1200px;
+  }
 }
 @media screen and (max-width: 1209px) {
   /* Main block */
@@ -2052,12 +2061,6 @@ body {
   }
   /* /Main block */
   /* Our works */
-  .position-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
   .position-wrapper .our-works__list {
     width: 748px;
     margin-right: -20px;
