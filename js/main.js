@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let teamWrapperStylePadding = parseFloat(teamWrapperStyle.paddingLeft);
     let margin = parseFloat(styleElem.marginRight);
     
-    let widthList = (item.offsetWidth + margin) * allItem.length + styleListMargin + teamWrapperStylePadding + 20;
+    let widthList = (item.offsetWidth + margin) * allItem.length + styleListMargin + teamWrapperStylePadding + 80;
     let step = (widthList - window.innerWidth) / window.innerWidth;
     let flag;
     let timerId;
@@ -242,18 +242,24 @@ document.addEventListener('DOMContentLoaded', function(){
     // Turn on music
     
     let audio = document.querySelector('.js-audio');
-    let audioButton = document.querySelector('.js-audio-button');
+    let audioButton = document.querySelectorAll('.js-audio-button');
     
-    audioButton.addEventListener("click", function() {
-        this.classList.toggle('active');
-        let audioSrc = audio.getAttribute('data-src');
-        if(!audio.hasAttribute('src')) {
-            audio.setAttribute('src',`${audioSrc}`);
-        }else {
-            audio.removeAttribute('src');
-            audio.pause();
-        }
+    audioButton.forEach(function(item) {
+        item.addEventListener("click", function() {
+            audioButton.forEach(function(item) {
+                item.classList.toggle('active');
+            });
+            
+            let audioSrc = audio.getAttribute('data-src');
+            if(!audio.hasAttribute('src')) {
+                audio.setAttribute('src',`${audioSrc}`);
+            }else {
+                audio.removeAttribute('src');
+                audio.pause();
+            }
+        });
     });
+    
     
     // //Turn on music
     
