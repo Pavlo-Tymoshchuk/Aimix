@@ -153,20 +153,25 @@ document.addEventListener('DOMContentLoaded', function(){
     let teamList = document.querySelector(".js-team-list");
     let allItem = teamList.querySelectorAll(".js-team-item");
     let item = teamList.querySelector(".js-team-item");
-    let widthList = item.offsetWidth * allItem.length;
-    let step = widthList / window.innerWidth;
+    let styleElem = window.getComputedStyle(item);
+    let styleList = window.getComputedStyle(teamList);
+    let styleListMargin = parseFloat(styleList.marginLeft);
+    let teamWrapperStyle = window.getComputedStyle(teamWrapper);
+    let teamWrapperStylePadding = parseFloat(teamWrapperStyle.paddingLeft);
+    let margin = parseFloat(styleElem.marginRight);
+    let widthList = (item.offsetWidth + margin) * allItem.length + styleListMargin + teamWrapperStylePadding + 20;
+    let step = (widthList - window.innerWidth) / window.innerWidth;
     let flag;
     let timerId;
     
-    let lastPositionElem = allItem[allItem.length - 1].offsetLeft;
     
-    console.log(lastPositionElem);
+    let lastPositionElem = allItem[allItem.length - 1].offsetLeft;
     
     teamWrapper.addEventListener('mouseenter', function(e){
         setTimeout(function(){
             leftMouseMove = teamWrapper.offsetLeft - e.clientX;
             teamList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px); transition: transform .6s`);
-        }, 100);
+        }, 200);
         
     });
     
