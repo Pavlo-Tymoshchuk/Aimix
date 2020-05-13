@@ -850,8 +850,8 @@ body {
   .header__item:hover {
     color: #4D68EA;
   }
-  .header__lang__item:hover::before {
-    width: 100%;
+  .header__lang__item:hover {
+    color: #4D68EA;
   }
   /* //Header */
   /* Our works */
@@ -967,20 +967,10 @@ body {
 .header__lang__item {
   margin-right: 15px;
   position: relative;
+  transition: color 0.4s;
 }
-.header__lang__item.active::before {
-  width: 100%;
-}
-.header__lang__item::before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: -2px;
-  width: 0%;
-  height: 2px;
-  border-radius: 1px;
-  background-color: #3B3B3B;
-  transition: width 0.4s;
+.header__lang__item.active {
+  color: #4D68EA;
 }
 .header__lang__item:last-child {
   margin-right: 0px;
