@@ -84,6 +84,56 @@
                 </ul>
             </div>
         </div>
+        <div class="mobile-widget">
+            <div class="mobile-widget__wrapper">
+                <input type="checkbox" class="menu-open" name="menu-open" id="menu-open"/>
+                <label class="menu-open-button" for="menu-open">
+                    <span class="hamburger hamburger-1"></span>
+                    <span class="hamburger hamburger-2"></span>
+                    <span class="hamburger hamburger-3"></span>
+                </label>
+                
+                <a href="#" class="menu-item">
+                    <span class="menu-item__container">
+                        <span class="icon-telegram"></span>
+                    </span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="menu-item__container">
+                        <span class="icon-viber"></span>
+                    </span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="menu-item__container">
+                        <span class="icon-whatsapp"></span>
+                    </span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="menu-item__container">
+                        <span class="icon-e-mail"></span> 
+                    </span>
+                </a>
+            </div>
+            <!-- filters -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                <filter id="shadowed-goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                    <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                    <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                    <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                    <feComposite in2="shadow" in="goo" result="goo" />
+                    <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                </filter>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                    <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                </filter>
+                </defs>
+            </svg>
+        </div>
         <section class="main-block">
             <div class="main-block__wrapper container">
                 <div class="decor-circle"></div>
@@ -522,6 +572,7 @@
                         <div class="call-back__file">
                             <label class="input-file__wrapper">
                                 <input type="file" class="input-file js-input-file" onchange="previewFile()">
+                                <span class="icon-file"></span>
                                 <span class="input-file__text">прикрепить файл </span>
                             </label>
                             <div class="call-back__file__name js-input-text-wrapper">
@@ -548,7 +599,7 @@
                 <h5 class="general-caption">инфо</h5>
                 <h2 class="main-caption-s">наш блог</h2>
                 <div class="position-wrapper">
-                    <ul class="blog__list blog__list-main">
+                    <ul class="blog__list blog__list-main blog__list-dark-theme">
                         <li class="blog__item">
                             <div class="blog__item__header">
                                 <div class="blog__item__info">
@@ -559,9 +610,7 @@
                                     <img src="./img/blog-img-1.png" alt="Картинка">
                                 </div>
                             </div>
-                            <div class="blog__item__body">
-                                <p>Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</p>
-                            </div>
+                            <a class="blog__item__body" href="#">Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</a>
                             <div class="blog__item__footer">06.05.2020</div>
                         </li>
                         <li class="blog__item">
@@ -574,9 +623,7 @@
                                     <img src="./img/blog-img-1.png" alt="Картинка">
                                 </div>
                             </div>
-                            <div class="blog__item__body">
-                                <p>Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</p>
-                            </div>
+                            <a class="blog__item__body" href="#">Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</a>
                             <div class="blog__item__footer">06.05.2020</div>
                         </li>
                         <li class="blog__item">
@@ -589,9 +636,7 @@
                                     <img src="./img/blog-img-1.png" alt="Картинка">
                                 </div>
                             </div>
-                            <div class="blog__item__body">
-                                <p>Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</p>
-                            </div>
+                            <a class="blog__item__body" href="#">Компания Apple сообщила официальную дату проведения конференции для разработчиков WWDC 2020. Она пройдет 22 июня в онлайн-фо</a>
                             <div class="blog__item__footer">06.05.2020</div>
                         </li>
                     </ul>

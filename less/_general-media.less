@@ -23,9 +23,14 @@
         line-height: 58px;
     }
     
-    .main-caption-x {
+    .main-caption-s {
         font-size: 20px;
         line-height: 130%;
+    }
+    
+    .main-caption-l {
+        font-size: 36px;
+        line-height: 44px;
     }
     
     .general-caption {
@@ -47,6 +52,11 @@
     .main-caption-xl {
         font-size: 36px;
         line-height: 44px;
+    }
+    
+    .main-caption-l {
+        font-size: 24px;
+        line-height: 29px;
     }
     
     .main-textarea {
@@ -85,10 +95,9 @@
 }
 
 @media screen and (max-width: 576px) {
-    .fixed-navigation__wrapper {
-        .audio-button {
-            display: none;
-        }
+    .fixed-navigation__wrapper,
+    .button-to-top {
+        display: none;
     }
     
     .social-list {
@@ -114,4 +123,10 @@
     }
     
     /* //General tabs */
+    
+    /* Widget */
+    
+    .mobile-widget__wrapper {
+        display: block;
+    }
 }

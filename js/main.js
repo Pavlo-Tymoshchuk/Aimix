@@ -258,6 +258,10 @@ document.addEventListener('DOMContentLoaded', function(){
     
     let maxScroll = document.body.offsetHeight - document.documentElement.clientHeight;
     
+    if(window.scrollY < 100) {
+        console.log('asd');
+        document.querySelector('.js-fixed-nav').classList.add('hide');
+    }
     
     document.addEventListener('scroll', function() {
         let scrollTopCurrent = window.scrollY;
