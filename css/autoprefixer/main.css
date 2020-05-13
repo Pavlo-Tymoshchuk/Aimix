@@ -2505,14 +2505,6 @@ body {
   .our-team__wrapper::-webkit-scrollbar {
     display: none;
   }
-}
-@media screen and (max-width: 1209px) {
-  /* Main block */
-  .main-block::before {
-    background-size: cover;
-  }
-  /* /Main block */
-  /* Our works */
   .position-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2529,6 +2521,17 @@ body {
     align-items: center;
     width: 100%;
   }
+  .position-wrapper .our-works__list {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 1209px) {
+  /* Main block */
+  .main-block::before {
+    background-size: cover;
+  }
+  /* /Main block */
+  /* Our works */
   .position-wrapper .our-works__list {
     width: 748px;
     margin-right: -20px;
