@@ -147,64 +147,6 @@ document.addEventListener('DOMContentLoaded', function(){
     
     // //Position quiz info block
     
-    // Our team 
-    
-    let teamWrapper = document.querySelector('.js-team-wrapper');
-    let teamList = document.querySelector(".js-team-list");
-    let allItem = teamList.querySelectorAll(".js-team-item");
-    let item = teamList.querySelector(".js-team-item");
-    
-    let styleElem = window.getComputedStyle(item);
-    let styleList = window.getComputedStyle(teamList);
-    let styleListMargin = parseFloat(styleList.marginLeft);
-    let teamWrapperStyle = window.getComputedStyle(teamWrapper);
-    let teamWrapperStylePadding = parseFloat(teamWrapperStyle.paddingLeft);
-    let margin = parseFloat(styleElem.marginRight);
-    
-    function moveList() {
-        let widthList = (item.offsetWidth + margin) * allItem.length + styleListMargin + teamWrapperStylePadding + 250;
-        let step = (widthList - window.innerWidth) / window.innerWidth;
-        let flag;
-        let timerId;
-        let setTimMouseEnter;
-        
-        teamWrapper.addEventListener('mouseenter', function(e){
-            setTimMouseEnter = setTimeout(function(){
-                leftMouseMove = teamWrapper.offsetLeft - e.clientX;
-                teamList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px); transition: transform .6s`);
-            }, 200);
-            
-        });
-        
-        teamWrapper.addEventListener('mousemove', function(e){
-            timerId = setTimeout(function(){
-                flag = true;
-            }, 500);
-
-            if(flag){
-                clearTimeout(timerId);
-                clearTimeout(setTimMouseEnter);
-                leftMouseMove = this.offsetLeft - e.clientX;
-                let transition = Math.abs(leftMouseMove) / 10000;
-                teamList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px); transition: transform ${transition}s`);
-            }
-        });
-        
-        teamWrapper.addEventListener('mouseleave', function(e){
-            flag = false;
-            clearTimeout(setTimMouseEnter);
-            teamList.setAttribute('style', `transform: translateX(0px); transition: transform .6s`);
-        });
-    }
-    
-    moveList();
-    
-    window.addEventListener('resize', function() {
-        moveList();
-    });
-    
-    // Our team 
-    
     // Popup
         
     let mainButton = document.querySelectorAll('.js-button');
@@ -314,13 +256,13 @@ document.addEventListener('DOMContentLoaded', function(){
     
     // Footer 
     
-    let scrollTopChange = 0;
     let maxScroll = document.body.offsetHeight - document.documentElement.clientHeight;
+    
     
     document.addEventListener('scroll', function() {
         let scrollTopCurrent = window.scrollY;
         
-        if(scrollTopCurrent > maxScroll - 100) {
+        if(scrollTopCurrent > maxScroll - 150) {
             document.querySelector('.js-fixed-nav').classList.add('hide');
         }else {
             document.querySelector('.js-fixed-nav').classList.remove('hide');

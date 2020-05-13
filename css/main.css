@@ -114,6 +114,51 @@ body {
   color: #3B3B3B;
   background: linear-gradient(180deg, #FDFBFB 0%, #EBEDEE 100%);
   overflow: hidden;
+  min-height: 100vh;
+}
+.dark-theme {
+  color: #E0E0E0;
+  background: #282828;
+}
+.dark-theme .dark-logo {
+  display: none;
+}
+.dark-theme .white-logo {
+  display: block;
+}
+.dark-theme .fixed-navigation {
+  background: #333333;
+}
+.dark-theme .header__lang__item::before {
+  background-color: #E0E0E0;
+}
+.dark-theme .audio-button::before {
+  background: url(../img/audio-on-white.png) center / contain no-repeat;
+}
+.dark-theme .input-file__text::before {
+  background: url(../img/icon-file-white.svg) center / contain no-repeat;
+}
+.dark-theme .audio-decor-off__item {
+  background-color: #E0E0E0;
+}
+.dark-theme .decor-circle {
+  display: none;
+}
+.dark-theme .header-burger {
+  border-color: #E0E0E0;
+}
+.dark-theme .header-burger::before {
+  background-color: #E0E0E0;
+}
+.dark-theme .header__lang__button::after {
+  background: url(../img/icon-drop-white.png) center / contain no-repeat;
+}
+.dark-theme .call-back__file__name {
+  background: #333333;
+}
+.dark-theme .delete-file::before,
+.dark-theme .delete-file::after {
+  background-color: #E0E0E0;
 }
 .container {
   max-width: 1280px;
@@ -218,6 +263,11 @@ body {
   color: #4D68EA;
 }
 .main-caption-l {
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: uppercase;
+}
+.main-caption-s {
   font-size: 24px;
   line-height: 110%;
   text-transform: uppercase;
@@ -484,7 +534,7 @@ body {
   transition: opacity 0.4s, bottom 0.4s;
 }
 .button-to-top.show {
-  bottom: 60px;
+  bottom: 100px;
   opacity: 1;
   z-index: 3;
 }
@@ -540,6 +590,36 @@ body {
 .social-item:last-child {
   margin-right: 0px;
 }
+/* General tabs */
+.general-tab__list {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 30px 0px 45px;
+}
+.general-tab__item {
+  margin-right: 30px;
+  padding-bottom: 3px;
+  position: relative;
+  cursor: pointer;
+}
+.general-tab__item.active::before {
+  width: 100%;
+}
+.general-tab__item::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background: #3B3B3B;
+  transition: width 0.4s;
+}
 @media screen and (min-width: 1200px) {
   /* General */
   .check__wrapper:hover .input-text {
@@ -558,6 +638,9 @@ body {
   .audio-button:hover,
   .social-item:hover {
     color: #4D68EA;
+  }
+  .general-tab__item:hover::before {
+    width: 100%;
   }
   /* //General */
   /* Header */
@@ -695,7 +778,8 @@ body {
 }
 .header-burger,
 .header__logo-nav,
-.header__close-nav {
+.header__close-nav,
+.white-logo {
   display: none;
 }
 /* Main block */
@@ -912,7 +996,7 @@ body {
   max-width: 600px;
   width: 100%;
 }
-.calc-block__quiz .main-caption-l {
+.calc-block__quiz .main-caption-s {
   margin-top: 10px;
 }
 .quiz__wrapper {
@@ -1232,7 +1316,7 @@ body {
   max-width: 520px;
   width: 100%;
 }
-.question__info .main-caption-l {
+.question__info .main-caption-s {
   margin-top: 10px;
   line-height: 130%;
 }
@@ -1286,7 +1370,7 @@ body {
 .support {
   margin-bottom: 150px;
 }
-.support__wrapper .main-caption-l {
+.support__wrapper .main-caption-s {
   margin-top: 10px;
 }
 .support__text {
@@ -1356,7 +1440,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.call-back__info .main-caption-l {
+.call-back__info .main-caption-s {
   margin: 10px 0px;
 }
 .call-back__text {
@@ -1504,7 +1588,7 @@ body {
 .blog__wrapper {
   color: #E0E0E0;
 }
-.blog__wrapper .main-caption-l {
+.blog__wrapper .main-caption-s {
   margin-top: 10px;
 }
 .blog__wrapper .blog__list {
@@ -1580,7 +1664,7 @@ body {
 .seo-block {
   margin-bottom: 80px;
 }
-.seo-block .main-caption-l {
+.seo-block .main-caption-s {
   margin-top: 10px;
 }
 .seo-block__text {
@@ -1603,6 +1687,24 @@ body {
   color: #3B3B3B;
   margin-bottom: 10px;
 }
+/* // Seo block */
+/* Our works page */
+.our-works-page {
+  margin: 50px 0px 150px;
+}
+.our-works-page .look-else-button {
+  margin: 50px auto 0px;
+}
+/* /Our works page */
+/* Work */
+.work {
+  margin: 50px auto 150px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* //Work */
 /* Popup */
 .popup {
   position: fixed;
@@ -1753,6 +1855,7 @@ body {
 /* Footer */
 .footer {
   padding-bottom: 30px;
+  margin-top: auto;
 }
 .footer__wrapper {
   display: flex;
@@ -1807,7 +1910,7 @@ body {
     font-size: 48px;
     line-height: 58px;
   }
-  .main-caption-l {
+  .main-caption-x {
     font-size: 20px;
     line-height: 130%;
   }
@@ -1830,6 +1933,30 @@ body {
   .main-textarea {
     height: 145px;
   }
+  /* General tabs */
+  .general-tab__list {
+    margin: 30px 0px 30px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding-left: 20px;
+  }
+  .general-tab__list::-webkit-scrollbar {
+    display: none;
+  }
+  .general-tab__list::after {
+    content: "";
+    width: 1px;
+    height: 1px;
+    flex-shrink: 0;
+  }
+  .general-tab__item {
+    flex-shrink: 0;
+    text-align: center;
+  }
+  /* //General tabs */
 }
 @media screen and (max-width: 576px) {
   .fixed-navigation__wrapper .audio-button {
@@ -1842,6 +1969,17 @@ body {
   .social-item {
     margin-right: 0px;
   }
+  /* General tabs */
+  .general-tab__list {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .general-tab__item {
+    width: 100px;
+    padding-bottom: 13px;
+    margin-right: 10px;
+  }
+  /* //General tabs */
 }
 /* Header */
 @media screen and (max-width: 1024px) {
@@ -2334,6 +2472,16 @@ body {
     display: none;
   }
   /* //Seo block */
+  /* Our works page */
+  .our-works-page {
+    margin: 50px 0px 80px;
+  }
+  /* //Our works page */
+  /* Work */
+  .work {
+    margin: 50px auto 80px;
+  }
+  /* //Work */
 }
 @media screen and (max-width: 767px) {
   /* Main block */
@@ -2606,6 +2754,19 @@ body {
     margin-right: 10px;
   }
   /* //Blog */
+  /* Our works page */
+  .our-works-page {
+    margin: 30px 0px 50px;
+  }
+  .our-works-page .look-else-button {
+    margin: 30px auto 0px;
+  }
+  /* //Our works page */
+  /* Work */
+  .work {
+    margin: 30px auto 50px;
+  }
+  /* //Work */
 }
 @media screen and (max-width: 576px) {
   /* Calc block */

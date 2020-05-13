@@ -23,7 +23,7 @@
         line-height: 58px;
     }
     
-    .main-caption-l {
+    .main-caption-x {
         font-size: 20px;
         line-height: 130%;
     }
@@ -52,6 +52,36 @@
     .main-textarea {
         height: 145px;
     }
+    
+    /* General tabs */
+    
+    .general-tab__list {
+        margin: 30px 0px 30px;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        padding-left: 20px;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        &::after {
+            content: "";
+            width: 1px;
+            height: 1px;
+            flex-shrink: 0;
+        }
+    }
+    
+    .general-tab__item {
+        flex-shrink: 0;
+        text-align: center;
+    }
+    
+    /* //General tabs */
 }
 
 @media screen and (max-width: 576px) {
@@ -69,4 +99,19 @@
     .social-item {
         margin-right: 0px;
     }
+    
+    /* General tabs */
+    
+    .general-tab__list {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    
+    .general-tab__item {
+        width: 100px;
+        padding-bottom: 13px;
+        margin-right: 10px;
+    }
+    
+    /* //General tabs */
 }

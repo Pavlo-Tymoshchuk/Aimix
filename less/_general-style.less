@@ -99,6 +99,75 @@ body {
     color: #3B3B3B;
     background: linear-gradient(180deg, #FDFBFB 0%, #EBEDEE 100%);
     overflow: hidden;
+    min-height: 100vh;
+}
+
+.dark-theme {
+    color: #E0E0E0;
+    background: #282828;
+    
+    .dark-logo {
+        display: none;
+    }
+    
+    .white-logo {
+        display: block;
+    }
+    
+    .fixed-navigation {
+        background: #333333;
+    }
+    
+    .header__lang__item {
+        &::before {
+            background-color: #E0E0E0;
+        }
+    }
+    
+    .audio-button {
+        &::before {
+            background: url(../img/audio-on-white.png) center / contain no-repeat
+        }
+    }
+    
+    .input-file__text {
+        &::before {
+            background: url(../img/icon-file-white.svg) center / contain no-repeat
+        }
+    }
+    
+    .audio-decor-off__item {
+        background-color: #E0E0E0;
+    }
+    
+    .decor-circle {
+        display: none;
+    }
+    
+    .header-burger {
+        border-color: #E0E0E0;
+        
+        &::before {
+            background-color: #E0E0E0;
+        }
+    }
+    
+    .header__lang__button {
+        &::after {
+            background: url(../img/icon-drop-white.png) center / contain no-repeat;
+        }
+    }
+    
+    .call-back__file__name {
+        background: #333333;
+    }
+    
+    .delete-file {
+        &::before,
+        &::after {
+            background-color: #E0E0E0;
+        }
+    }
 }
 
 .container {
@@ -223,6 +292,12 @@ body {
 }
 
 .main-caption-l {
+    font-size: 48px;
+    line-height: 58px;
+    text-transform: uppercase;
+} 
+
+.main-caption-s {
     font-size: 24px;
     line-height: 110%;
     text-transform: uppercase;
@@ -536,7 +611,7 @@ body {
     transition: opacity .4s, bottom .4s;
     
     &.show {
-        bottom: 60px;
+        bottom: 100px;
         opacity: 1;
         z-index: 3;
     }
@@ -600,5 +675,42 @@ body {
     
     &:last-child {
         margin-right: 0px;
+    }
+}
+
+/* General tabs */
+
+.general-tab__list {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 30px 0px 45px;
+}
+
+.general-tab__item {
+    margin-right: 30px;
+    padding-bottom: 3px;
+    position: relative;
+    cursor: pointer;
+    
+    &.active {
+        &::before {
+            width: 100%;
+        }
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 0;
+        height: 2px;
+        background: #3B3B3B;
+        transition: width .4s;
     }
 }
