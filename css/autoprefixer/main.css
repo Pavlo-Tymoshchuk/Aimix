@@ -979,14 +979,14 @@ body {
 .menu-open:checked ~ .menu-item:nth-child(4) {
   -webkit-transition-duration: 280ms;
   transition-duration: 280ms;
-  -webkit-transform: translate3d(-65px, 45px, 0);
-  transform: translate3d(-65px, 45px, 0);
+  -webkit-transform: translate3d(-75px, 42px, 0);
+  transform: translate3d(-75px, 42px, 0);
 }
 .menu-open:checked ~ .menu-item:nth-child(5) {
   -webkit-transition-duration: 380ms;
   transition-duration: 380ms;
-  -webkit-transform: translate3d(-65x, -45px, 0);
-  transform: translate3d(-65px, -45px, 0);
+  -webkit-transform: translate3d(-75px, -42px, 0);
+  transform: translate3d(-75px, -42px, 0);
 }
 .menu-open:checked ~ .menu-item:nth-child(6) {
   -webkit-transition-duration: 480ms;
@@ -1028,8 +1028,8 @@ body {
   .header__item:hover {
     color: #4D68EA;
   }
-  .header__lang__item:hover::before {
-    width: 100%;
+  .header__lang__item:hover {
+    color: #4D68EA;
   }
   /* //Header */
   /* Our works */
@@ -1163,21 +1163,11 @@ body {
 .header__lang__item {
   margin-right: 15px;
   position: relative;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
 }
-.header__lang__item.active::before {
-  width: 100%;
-}
-.header__lang__item::before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: -2px;
-  width: 0%;
-  height: 2px;
-  border-radius: 1px;
-  background-color: #3B3B3B;
-  -webkit-transition: width 0.4s;
-  transition: width 0.4s;
+.header__lang__item.active {
+  color: #4D68EA;
 }
 .header__lang__item:last-child {
   margin-right: 0px;
@@ -2383,10 +2373,9 @@ body {
 /* Work */
 .work {
   margin: 50px auto 150px;
+}
+.work img {
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 /* //Work */
 /* About us */
@@ -2805,7 +2794,8 @@ body {
   /* //General tabs */
 }
 @media screen and (max-width: 576px) {
-  .fixed-navigation__wrapper .audio-button {
+  .fixed-navigation__wrapper,
+  .button-to-top {
     display: none;
   }
   .social-list {
@@ -3766,13 +3756,6 @@ body {
   .call-back__links-wrapper-mobile {
     display: block;
     margin-top: 30px;
-  }
-  .input-file__text {
-    padding-left: 20px;
-  }
-  .input-file__text::before {
-    width: 14px;
-    height: 17px;
   }
   .call-back__file__name {
     max-width: 125px;

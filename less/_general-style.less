@@ -221,6 +221,10 @@ body {
     }
 }
 
+.main-button--line {
+    border: 1px solid #FFFFFF;
+}
+
 .main-button-dark {
     color: #4D68EA;
     background-color: #454444;
@@ -295,7 +299,16 @@ body {
     span {
         color: #4D68EA;
     }
-} 
+}
+
+.main-caption-m {
+    font-size: 40px;
+    line-height: 49px;
+    
+    span {
+        color: #4D68EA;
+    }
+}
 
 .main-caption-s {
     font-size: 24px;
@@ -714,6 +727,83 @@ body {
         transition: width .4s;
     }
 }
+
+/* General drop */
+
+.general-drop-wrapper {
+    position: relative;
+    
+     &.active {
+        .general-drop__more-info {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility .4s, opacity .4s;
+        }
+    }
+}
+
+.general-drop-button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #3B3B3B;
+    top: 2px;
+    position: relative;
+    flex-shrink: 0;
+    transition: border-color .4s;
+    
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 2px;
+        width: 2px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #3B3B3B;
+        transform: translateX(-50%);
+        transition: background-color .4s;
+    }
+    
+    &::after {
+        left: 50%;
+        top: auto;
+        bottom: 3px;
+        height: 4px;
+    }
+}
+
+.general-drop__more-info {
+    position: absolute;
+    padding: 20px;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 700;
+    width: 290px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    z-index: 2;
+    bottom: calc(100% + 22px);
+    right: -25px;
+    visibility: hidden;
+    opacity: 0;
+    letter-spacing: 0;
+    text-transform: initial;
+    transition: visibility .4s .4s, opacity .4s;
+    
+    .decor {
+        position: absolute;
+        right: 15px;
+        bottom: -30px;
+        border: 16px solid transparent;
+        border-top-color: #fff;
+        filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.1));
+    }
+}
+
+/* //General drop */
 
 /* widget mobile */
 

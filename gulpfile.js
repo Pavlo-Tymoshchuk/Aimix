@@ -6,6 +6,7 @@ gulp.task('serve', ['less'], function() {
         server: "../Aimix"
     });
     gulp.watch("less/*.less", ['less']);
+    gulp.watch("less/presentation/*.less", ['less']);
     gulp.watch("*.html").on('change', browserSync.reload);
     gulp.watch("documents/*.html").on('change', browserSync.reload);
     gulp.watch("js/*.js").on('change', browserSync.reload);
@@ -33,6 +34,14 @@ var path = require('path');
  
 gulp.task('less', function () {
   return gulp.src('less/main.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('less', function () {
+  return gulp.src('less/presentation.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
