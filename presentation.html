@@ -40,21 +40,21 @@
             </div>
         </header>
         <main>
-            <section class="main-banner">
+            <section class="main-banner animation-block js-animation-show">
                 <div class="main-banner__background"></div>
                 <div class="main-banner__wrapper container">
-                    <div class="main-banner__info">
+                    <div class="main-banner__info fadeInLeft">
                         <p class="main-banner__info__sub-caption">aimix.space</p>
                         <h1 class="main-banner__info__caption">Интернет-магазины от <span>AIMIX</span></h1>
                         <p class="main-banner__info__text">Для тех, кто ищет выгодное предложение по разработке магазина и надежного технического партнера</p>
                     </div>
-                    <div class="main-banner__img"  v-lazy:background-image="'./img/presentation/main-banner-img.png'"></div>
+                    <div class="main-banner__img fadeInRight"  v-lazy:background-image="'./img/presentation/main-banner-img.png'"></div>
                     <p class="general-decor-text">e-commerce</p>
                 </div>
             </section>
-            <section class="offers">
+            <section class="offers animation-block js-animation-show">
                 <div class="offers__wrapper container">
-                    <ul class="offers__list">
+                    <ul class="offers__list fadeInUp">
                         <li class="offers__item">
                             <div class="offers__item__img">
                                 <img v-lazy="'./img/presentation/offers-img-1.svg'" alt="Оптимизированы для быстрой работы">
@@ -106,54 +106,40 @@
                     </ul>
                 </div>
             </section>
-            <section class="power">
+            <section class="power animation-block js-animation-show">
                 <div class="power__wrapper container">
-                    <div class="power__video">
+                    <div class="power__video fadeInLeft">
                         <video controls="controls" autoplay="autoplay" loop="loop" muted="muted">
                             <source src="./video/presentation/coverr-wild-horses.mp4">
                         </video>
                     </div>
-                    <div class="power__text">
+                    <div class="power__text fadeInRight">
                         <strong class="main-caption-l">Интернет-магазин мощностью в <br><span>1000</span> лошадиных сил</strong>
                     </div>
                     <p class="general-decor-text">speed</p>
                 </div>
             </section>
-            <section class="our-services">
+            <section class="our-services animation-block js-animation-show">
                 <div class="our-services__wrapper container">
                     <div class="decor-circle"></div>
                     <h5 class="general-caption general-caption--presentation"></h5>
                     <p class="main-caption-m main-caption-m--presentation"><strong>Интернет-магазины от AIMIX</strong></p>
                     <ul class="our-services__list">
-                        <li class="our-services__item">
+                        <li class="our-services__item fadeInLeft js-drop-item">
                             <div class="our-services__item__inner">
                                 <p class="our-services__item__type">individual development</p>
                                 <p class="our-services__item__name"><span>Индивидуальная разработка</span><br> ‍интернет-магазина для вашего бизнеса <span>на framework</span> 💻</p>
                                 <ul class="our-services__info-list">
                                     <li class="our-services__info-item">Возможность оформления заказа без авторизации</li>
                                     <li class="our-services__info-item">Простота в обслуживании</li>
+                                    <li class="our-services__info-item">Высокая производительность,  выдерживание высоких нагрузок</li>
+                                    <li class="our-services__info-item">Надежность и безопасность</li>
+                                    <li><blockquote class="our-services__item__blockquote">Сайт полностью ваш - никакой кабалы с регулярными платежами и прочим. Вы всегда можете доработать сайт самостоятельно или при помощи найма сторонних программистов</blockquote></li>
                                 </ul>
-                                <blockquote class="our-services__item__blockquote">Сайт полностью ваш - никакой кабалы с регулярными платежами и прочим. Вы всегда можете доработать сайт самостоятельно или при помощи найма сторонних программистов</blockquote>
-                                <button class="look-else-button">еще</button>
+                                <button class="look-else-button js-drop-button">еще</button>
                             </div>
                         </li>
-                        <li class="our-services__item">
-                            <div class="our-services__item__inner">
-                                <p class="our-services__item__type">sales tools</p>
-                                <p class="our-services__item__name">Большое количество важных <span>функций</span>, <span>повышающих продажи</span> 💰</p>
-                                <ul class="our-services__info-list">
-                                    <li class="our-services__info-item">Возможность проведения акций:
-                                        <ul class="our-services__sub-list">
-                                            <li class="our-services__sub-item">система скидок</li>
-                                            <li class="our-services__sub-item">система промокодо</li>
-                                        </ul>
-                                    </li>
-                                    <li class="our-services__info-item">Функция «потерянный заказ» позволит вам контролировать незавершенные продажи и совершать допродажу или анализировать причины отказа</li>
-                                </ul>
-                                <button class="look-else-button">еще</button>
-                            </div>
-                        </li>
-                        <li class="our-services__item">
+                        <li class="our-services__item fadeInUp">
                             <div class="our-services__item__inner">
                                 <p class="our-services__item__type">admin panel</p>
                                 <p class="our-services__item__name"><span>Удобная</span> и функциональная <span>административная панель</span> 🛠</p>
@@ -170,11 +156,40 @@
                                             </div>
                                         </div>
                                     </li>
+                                    <li class="our-services__info-item">Статистика посещений и продаж прямо в админке</li>
+                                    <li class="our-services__info-item">Руководство пользователя</li>
                                 </ul>
                                 <button class="look-else-button">еще</button>
                             </div>
                         </li>
-                        <li class="our-services__item">
+                        <li class="our-services__item fadeInRight js-drop-item">
+                            <div class="our-services__item__inner">
+                                <p class="our-services__item__type">sales tools</p>
+                                <p class="our-services__item__name">Большое количество важных <span>функций</span>, <span>повышающих продажи</span> 💰</p>
+                                <ul class="our-services__info-list">
+                                    <li class="our-services__info-item">Возможность проведения акций:
+                                        <ul class="our-services__sub-list">
+                                            <li class="our-services__sub-item">система скидок</li>
+                                            <li class="our-services__sub-item">система промокодо</li>
+                                        </ul>
+                                    </li>
+                                    <li class="our-services__info-item">Функция «потерянный заказ» позволит вам контролировать незавершенные продажи и совершать допродажу или анализировать причины отказа</li>
+                                    <li class="our-services__info-item">Мультиязычность - думаете расширяться на другие рынки в дальнейшем? Создайте столько языковых версий сколько Вам необходимо, ограничений нет.</li>
+                                    <li class="our-services__info-item">Коммуникационные и социальные функции:
+                                        <ul class="our-services__sub-list">
+                                            <li class="our-services__sub-item">продвинутые отзывы, комментарии, рейтинги - повышают пользовательскую вовлеченность</li>
+                                            <li class="our-services__sub-item">списки избранных товаров и сравнения</li>
+                                            <li class="our-services__sub-item">личный кабинет пользователя</li>
+                                        </ul>
+                                    </li>
+                                    <li class="our-services__info-item">Уведомления email на почту</li>
+                                    <li class="our-services__info-item">Большой набор инструментов для маркетинга и продаж</li>
+                                    <li class="our-services__info-item">Эффективные и проработанные элементы дизайна, которые повышают конверсию магазина</li>
+                                </ul>
+                                <button class="look-else-button js-drop-button">еще</button>
+                            </div>
+                        </li>
+                        <li class="our-services__item fadeInUp">
                             <div class="our-services__item__inner">
                                 <p class="our-services__item__type">SEO optimization</p>
                                 <p class="our-services__item__name"><span>SEO оптимизация</span> (это сразу дает экономию порядка $500-1500) 🔍</p>
@@ -183,12 +198,11 @@
                                     <li class="our-services__info-item">Индивидуальный title, description, seo-текст для каждой страницы, а также для катагорий товаров, блога и прочего</li>
                                     <li class="our-services__info-item">Оптимизация изображений</li>
                                 </ul>
-                                <button class="look-else-button">еще</button>
                             </div>
                         </li>
                     </ul>
                     <p class="general-decor-text">our services</p>
-                    <div class="our-services__text">
+                    <div class="our-services__text js-animation-show fadeInUpAlone">
                         <blockquote>
                             <p>Если вы хотите посадить дерево, а не посеять траву - это то, что вам нужно. Это разумная инвестиция на многие годы</p>
                             <p>Вам не нужно будет более начинать разработку заново, вы сможете расширять и усовершенствовать текущий проект</p>
@@ -197,12 +211,12 @@
                     </div>
                 </div>
             </section>
-            <section class="interfase">
+            <section class="interfase animation-block js-animation-show">
                 <div class="interfase__wrapper container">
                     <h5 class="general-caption general-caption--presentation"></h5>
                     <p class="main-caption-m main-caption-m--presentation"><strong>Элементы интерфейса</strong></p>
                     <div class="interfase__container">
-                        <ul class="interfase__list">
+                        <ul class="interfase__list fadeInUp">
                             <li class="interfase__item">
                                 <div class="interfase__item__inner">
                                     <p class="interfase__item__type">main page</p>
@@ -247,9 +261,9 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="interfase__img" v-lazy:background-image="'./img/presentation/interfase-img.png'"></div>
+                        <div class="interfase__img fadeInRight" v-lazy:background-image="'./img/presentation/interfase-img.png'"></div>
                     </div>
-                    <ul class="interfase__list">
+                    <ul class="interfase__list js-animation-show fadeInUpAlone">
                         <li class="interfase__item">
                             <div class="interfase__item__inner">
                                 <p class="interfase__item__type">Product list</p>
@@ -322,11 +336,11 @@
                     <p class="general-decor-text">interface</p>
                 </div>
             </section>
-            <section class="search">
+            <section class="search animation-block js-animation-show">
                 <div class="search__wrapper container">
                     <div class="decor-circle"></div>
                     <p class="search__caption">details</p>
-                    <div class="search__info">
+                    <div class="search__info fadeInRight">
                         <h5 class="general-caption general-caption--presentation"></h5>
                         <p class="main-caption-m main-caption-m--presentation"><strong>Поиск товаров</strong></p>
                         <div class="search__info__text">
@@ -338,22 +352,22 @@
                 </div>
                 <div class="search__img-container">
                     <div class="container">
-                        <div class="search__img">
+                        <div class="search__img js-animation-show fadeInUpAlone">
                             <img v-lazy="'./img/presentation/search-img.png'" alt="Aimix/search">
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="product-card">
+            <section class="product-card animation-block js-animation-show">
                 <div class="product-card__wrapper container">
-                    <div class="product-card__info">
+                    <div class="product-card__info fadeInLeft">
                         <h5 class="general-caption general-caption--presentation"></h5>
                         <p class="main-caption-m main-caption-m--presentation"><strong>Карточка товара</strong></p>
                         <div class="product-card__text">
                             <p>Карточка товара с автоматической анимацией по наведению для демонстрации доступных параметров и видов товара</p>
                         </div>
                     </div>
-                    <div class="product-card__video">
+                    <div class="product-card__video fadeInRight">
                         <video controls="controls" autoplay="autoplay" loop="loop" muted="muted">
                             <source src="./video/presentation/prod_card.mp4">
                         </video>
@@ -361,12 +375,12 @@
                     <p class="general-decor-text">product card</p>
                 </div>
             </section>
-            <section class="catalog">
+            <section class="catalog animation-block js-animation-show">
                 <div class="catalog__wrapper container">
                     <div class="decor-circle"></div>
-                    <h5 class="general-caption general-caption--presentation"></h5>
-                    <p class="main-caption-m main-caption-m--presentation"><strong>Каталог товаров</strong></p>
-                    <div class="catalog__info">
+                    <h5 class="general-caption general-caption--presentation fadeInLeft"></h5>
+                    <p class="main-caption-m main-caption-m--presentation fadeInLeft"><strong>Каталог товаров</strong></p>
+                    <div class="catalog__info fadeInUp">
                         <div class="general-text">
                             <p>Каталог товаров способен переварить сотни категорий товаров и фильтров. Все необходимые фильтры по цене, дате, атрибутам товаров реализовываются в базовом пакете</p>
                         </div>
@@ -375,66 +389,66 @@
                             <p>Вам необходимо продать всего 10 товаров - хорошо, мы не станем перегружать каталог лишней фильтрацией и сортировкой</p>
                         </div>
                     </div>
-                    <div class="catalog__img">
+                    <div class="catalog__img js-animation-show fadeInUpAlone">
                         <img v-lazy="'./img/presentation/catalog-img.png'" alt="Aimix/catalog">
                     </div>
                     <p class="general-decor-text">catalog</p>
                 </div>
             </section>
-            <section class="product-page">
+            <section class="product-page animation-block js-animation-show">
                 <div class="product-page__wrapper container">
                     <div class="decor-circle"></div>
-                    <h5 class="general-caption general-caption--presentation"></h5>
-                    <p class="main-caption-m main-caption-m--presentation"><strong>Страница товара</strong></p>
+                    <h5 class="general-caption general-caption--presentation fadeInLeft"></h5>
+                    <p class="main-caption-m main-caption-m--presentation fadeInLeft"><strong>Страница товара</strong></p>
                     <div class="product-page__info">
-                        <div class="general-text">
+                        <div class="general-text fadeInLeft">
                             <p>Страница товара продумана и выверена с точки зрения маркетинга и правильного расположения элементов вплоть до каждого пикселя и проверена на опыте эффективных продаж. </p>
                         </div>
-                        <div class="general-text">
+                        <div class="general-text fadeInRight">
                             <p>Она выглядит привлекательно, ярко, но очень конкретно. Посетитель вашего сайта всегда сможет ознакомиться с характеристаками товара, прочитать отзывы о товаре, посмотреть рейтинг, ознакомиться с информацией о доставке, оплате и гарантии, и самое главное - кнопка «Купить» всегда под рукой.</p>
                         </div>
                     </div>
-                    <div class="product-page__img">
+                    <div class="product-page__img js-animation-show fadeInUpAlone">
                         <img v-lazy="'./img/presentation/product-page-img-1.png'" alt="Aimix/product-page">
                     </div>
                     <div class="product-page__list">
-                        <img v-lazy="'./img/presentation/product-page-img-2.png'" alt="Aimix/product-page">
-                        <img v-lazy="'./img/presentation/product-page-img-3.png'" alt="Aimix/product-page">
+                        <img v-lazy="'./img/presentation/product-page-img-2.png'" class="js-animation-show fadeInLeftAlone" alt="Aimix/product-page">
+                        <img v-lazy="'./img/presentation/product-page-img-3.png'" class="js-animation-show fadeInRightAlone" alt="Aimix/product-page">
                     </div>
                     <p class="general-decor-text">product page</p>
                 </div>
             </section>
-            <section class="checkout">
+            <section class="checkout animation-block js-animation-show">
                 <div class="checkout__wrapper container">
                     <div class="checkout__container">
-                        <div>
+                        <div class="fadeInLeft">
                             <h5 class="general-caption general-caption--presentation"></h5>
                             <p class="main-caption-m main-caption-m--presentation"><strong>Оформление заказа</strong></p>
                         </div>
-                        <div class="general-text">
+                        <div class="general-text fadeInRight">
                             <p>Как известно, уже сегодня мобильный трафик является превалирующим. Очень интуитивно и понятно проводим пользователя по 3 шагам оформления заказа - Ваш клиент не заблудится и с легкостью сможет оформить заказ со смартфона</p>
                         </div>
                     </div>
                     <div class="checkout__list">
-                        <img v-lazy="'./img/presentation/checkout-img-1.png'" alt="Aimix/checkout">
-                        <img v-lazy="'./img/presentation/checkout-img-2.png'" alt="Aimix/checkout">
-                        <img v-lazy="'./img/presentation/checkout-img-3.png'" alt="Aimix/checkout">
+                        <img v-lazy="'./img/presentation/checkout-img-1.png'" class="js-animation-show fadeInUpAlone animation-delay-2" alt="Aimix/checkout">
+                        <img v-lazy="'./img/presentation/checkout-img-2.png'" class="js-animation-show fadeInUpAlone animation-delay-4" alt="Aimix/checkout">
+                        <img v-lazy="'./img/presentation/checkout-img-3.png'" class="js-animation-show fadeInUpAlone animation-delay-6" alt="Aimix/checkout">
                     </div>
                     <p class="general-decor-text">checkout</p>
                 </div>
             </section>
-            <section class="blog">
+            <section class="blog animation-block js-animation-show">
                 <div class="blog__wrapper container">
                     <div class="decor-circle"></div>
-                    <div class="blog__info">
+                    <div class="blog__info fadeInLeft">
                         <h5 class="general-caption general-caption--presentation"></h5>
                         <p class="main-caption-m main-caption-m--presentation"><strong>Блог</strong></p>
                         <div class="general-text">
                             <p>Качественная организация блога, благодаря которому идет рост трафика, повышение экспертности магазина для покупателей, привлечение лидов через подписку. Подключены комментарии для получения обратной связи</p>
                         </div>
-                        <img class="blog__img" v-lazy="'./img/presentation/blog-img.png'" alt="Aimix/blog">
+                        <img class="blog__img js-animation-show fadeInUpAlone" v-lazy="'./img/presentation/blog-img.png'" alt="Aimix/blog">
                     </div>
-                    <div class="blog__video">
+                    <div class="blog__video fadeInRight">
                         <video controls="controls" autoplay="autoplay" loop="loop" muted="muted">
                             <source src="./video/presentation/blog.mp4">
                         </video>
@@ -442,19 +456,262 @@
                     <p class="general-decor-text">blog page</p>
                 </div>
             </section>
-            <section class="call-back">
+            <section class="account animation-block js-animation-show">
+                <div class="account__wrapper container">
+                    <div class="account__info fadeInRight">
+                        <h5 class="general-caption general-caption--presentation"></h5>
+                        <p class="main-caption-m main-caption-m--presentation"><strong>Личный кабинет пользователя</strong></p>
+                        <div class="general-text">
+                            <p>Личный кабинет пользователя, который облегчает и автоматизирует процесс взаимодействия между магазином и постоянными клиентами. </p>
+                        </div>
+                    </div>
+                    <div class="account__video js-animation-show fadeInUpAlone">
+                        <video controls="controls" autoplay="autoplay" loop="loop" muted="muted">
+                            <source src="./video/presentation/profile.mp4">
+                        </video>
+                    </div>
+                    <p class="general-decor-text">account</p>
+                </div>
+            </section>
+            <section class="banner-block js-animation-show fadeInUpAlone" v-lazy:background-image="'./img/presentation/banner-block.png'"></section>
+            <section class="order animation-block js-animation-show">
+                <div class="order__wrapper container">
+                    <div class="decor-circle"></div>
+                    <div class="order__info fadeInLeft">
+                        <h5 class="general-caption general-caption--presentation"></h5>
+                        <p class="main-caption-m main-caption-m--presentation"><strong>Отслеживание и повтор заказа</strong></p>
+                        <div class="general-text">
+                            <p>Многие пользователи заинтересованы в отслеживании своего заказа на разных этапах его обработки и пересылки</p>
+                            <p>А так же в возможности быстрого оформления привычного заказа </p>
+                        </div>
+                    </div>
+                    <div class="order__img-wrapper">
+                        <img class="order__img fadeInleft" v-lazy="'./img/presentation/order-img-1.png'" alt="Aimix/order">
+                        <img class="order__img fadeInUp" v-lazy="'./img/presentation/order-img-2.png'" alt="Aimix/order">
+                    </div>
+                    <div class="order__container">
+                        <div class="order__info js-animation-show fadeInRightAlone">
+                            <h5 class="general-caption general-caption--presentation "></h5>
+                            <p class="main-caption-m main-caption-m--presentation"><strong>Управление подписками</strong></p>
+                            <div class="general-text">
+                                <p>Пользователь может настроить уведомления о рассылках, для того, чтобы получать только интересную для него информацию</p>
+                            </div>
+                            <img class="order__img" v-lazy="'./img/presentation/order-img-4.png'" alt="Aimix/order">
+                        </div>
+                        <img class="order__img order__img--presentation js-animation-show fadeInLeftAlone" v-lazy="'./img/presentation/order-img-3.png'" alt="Aimix/order">
+                    </div>
+                    <p class="general-decor-text">notifications</p>
+                </div>
+            </section>
+            <section class="technologys animation-block js-animation-show" v-lazy:background-image="'./img/presentation/technology-bg.png'">
+                <div class="technologys__wrapper container">
+                    <div class="technologys__info fadeInLeft">
+                        <h5 class="general-caption general-caption--presentation"></h5>
+                        <p class="main-caption-m main-caption-m--presentation"><strong>Технологии, которые мы используем</strong></p>
+                        <div class="technologys__logo">
+                            <img v-lazy="'./img/presentation/laravel.png'" class="js-animation-show fadeInUpAlone animation-delay-2" alt="Aimix/technologys/laravel">
+                            <span class="decor-plus js-animation-show fadeInUpAlone animation-delay-4">+</span>
+                            <img v-lazy="'./img/presentation/vue.png'" class="js-animation-show fadeInUpAlone animation-delay-6" alt="Aimix/technologys/vue">
+                        </div>
+                        <blockquote class="technologys__blockquote">
+                            Почему мы, скорее всего, будем рекомендовать вам вести разработку на фреймворке, а именно на Laravel? 
+                        </blockquote>
+                        <button class="look-else-button js-button" data-target="technologys">Читать подробнее</button>
+                        <div class="technologys__autor js-animation-show fadeInUpAlone">
+                            <div class="technologys__autor__logo" v-lazy:background-image="'./img/presentation/autor-logo.png'"></div>
+                            <div class="wrapper">
+                                <p class="technologys__autor__name">Андрей</p>
+                                <p class="technologys__autor__position">Разработчик, php-программист</p>
+                            </div>
+                        </div>
+                        <p class="technologys__decor-text">technology</p>
+                    </div>
+                </div>
+            </section>
+            <section class="you-get animation-block js-animation-show">
+                <div class="you-get__wrapper container">
+                    <div class="decor-circle"></div>
+                    <div class="you-get__container">
+                        <div class="you-get__info fadeInLeft">
+                            <h5 class="general-caption general-caption--presentation"></h5>
+                            <p class="main-caption-m main-caption-m--presentation"><strong>Вы получаете:</strong></p>
+                            <ul class="you-get__info__list">
+                                <li class="you-get__info__item"><span>Удобный в обслуживании</span> продукт</li>
+                                <li class="you-get__info__item"><span>Легко масштабируемый</span> продукт: от небольшого магазина до очень крупного</li>
+                                <li class="you-get__info__item"><span>Отстутствие регулярных платежей:</span> после разработки магазин полностью передается вам в собственность</li>
+                                <li class="you-get__info__item"><span>Договорные отношения гарантируют</span> качество и полное функционирование продукта</li>
+                            </ul>
+                        </div>
+                        <div class="you-get__img fadeInRight">
+                            <img v-lazy="'./img/presentation/you-get-img.png'" alt="Aimix/you-get">
+                        </div>
+                    </div>
+                    <ul class="offers__list offers__list--you-get">
+                        <li class="offers__item js-animation-show fadeInUpAlone animation-delay-2">
+                            <div class="offers__item__img">
+                                <img v-lazy="'./img/presentation/you-get-offers-img-1.svg'" alt="Мультиязычность количество языков не ограничено">
+                            </div>
+                            <p class="offers__item__text">
+                                <span>Мультиязычность</span><br>количество языков не ограничено
+                            </p>
+                        </li>
+                        <li class="offers__item js-animation-show fadeInUpAlone animation-delay-4">
+                            <div class="offers__item__img">
+                                <img v-lazy="'./img/presentation/you-get-offers-img-2.svg'" alt="Онлайн-оплата интеграция с платежной системой">
+                            </div>
+                            <p class="offers__item__text">
+                                <span>Онлайн-оплата</span><br>интеграция с платежной системой
+                            </p>
+                        </li>
+                        <li class="offers__item js-animation-show fadeInUpAlone animation-delay-6">
+                            <div class="offers__item__img">
+                                <img v-lazy="'./img/presentation/you-get-offers-img-3.svg'" alt="Оповещение о заказах сразу же в messenger">
+                            </div>
+                            <p class="offers__item__text">
+                                <span>Оповещение о заказах</span><br>сразу же в messenger
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="administration animation-block js-animation-show">
+                <div class="administration__wrapper container">
+                    <div class="administration__container">
+                        <div class="fadeInLeft">
+                            <h5 class="general-caption general-caption--presentation"></h5>
+                            <p class="main-caption-m main-caption-m--presentation"><strong>Администрирование</strong></p>
+                        </div>
+                        <div class="general-text fadeInRight">
+                            <p>Вы легко сможете разобраться в управлении сайтом</p>
+                            <p>Вам будут доступны: любая информация о заказах, возможности добавления новых страниц и удаление старых, изменение внешнего оформления ресурса и редактирование контента</p>
+                        </div>
+                    </div>
+                    <div class="administration__img-list js-animation-show fadeInUpAlone">
+                        <div class="administration__img-list__wrapper">
+                            <button class="administration__img-item js-button js-show-img" data-target="show-img">
+                                <img v-lazy="'./img/presentation/administration-img-1.png'" alt="Aimix/administration">
+                            </button>
+                            <button class="administration__img-item administration__img-item--height js-button js-show-img" data-target="show-img">
+                                <img v-lazy="'./img/presentation/administration-img-3.png'" alt="Aimix/administration">
+                            </button>
+                        </div>
+                        <div class="administration__img-list__wrapper">
+                            <button class="administration__img-item administration__img-item--height js-button js-show-img" data-target="show-img">
+                                <img v-lazy="'./img/presentation/administration-img-2.png'" alt="Aimix/administration">
+                            </button>
+                            <div class="wrapper">
+                                <button class="administration__img-item js-button js-show-img" data-target="show-img">
+                                    <img v-lazy="'./img/presentation/administration-img-4.png'" alt="Aimix/administration">
+                                </button>
+                                <button class="administration__img-item js-button js-show-img" data-target="show-img">
+                                    <img v-lazy="'./img/presentation/administration-img-5.png'" alt="Aimix/administration">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="general-decor-text">admin panel</p>
+                </div>
+            </section>
+            <section class="tarrif">
+                <div class="tarrif__wrapper container">
+                    <h5 class="general-caption general-caption--presentation"></h5>
+                    <p class="main-caption-m main-caption-m--presentation"><strong>Тарифные планы</strong></p>
+                    <ul class="tarrif___list">
+                        <li class="tarrif__item js-animation-show fadeInUpAlone">
+                            <div class="tarrif__item__header">
+                                <p class="tarrif__name">Basic</p>
+                            </div>
+                            <div class="tarrif__item__price">
+                                <span class="dolar">$</span>
+                                <p class="current-price">1899</p>
+                                <p class="old-price">2799</p>
+                            </div>
+                            <ul class="tarrif__info-list">
+                                <li class="tarrif__info-item">Адаптация под мобильные устройства</li>
+                                <li class="tarrif__info-item">70 и больше балов google page speed</li>
+                                <li class="tarrif__info-item">Поддержка в течение года</li>
+                                <li class="tarrif__info-item">Панель управления</li>
+                                <li class="tarrif__info-item">SEO оптимизация</li>
+                                <li class="tarrif__info-item">До 50% возврат средств в течение 30 дней</li>
+                            </ul>
+                            <button class="main-button js-button-decor js-button" data-target="popup-project">
+                                <span class="text">обсудить проект</span>
+                            </button>
+                        </li>
+                        <li class="tarrif__item js-animation-show fadeInUpAlone animation-delay-4">
+                            <div class="tarrif__item__header">
+                                <p class="tarrif__name">Custom</p>
+                            </div>
+                            <div class="tarrif__item__price">
+                                <span>от</span>
+                                <span class="dolar">$</span>
+                                <p class="current-price">3000</p>
+                            </div>
+                            <ul class="tarrif__info-list">
+                                <li class="tarrif__info-item">Адаптация под мобильные устройства</li>
+                                <li class="tarrif__info-item">70 и больше балов google page speed</li>
+                                <li class="tarrif__info-item">Поддержка в течение года</li>
+                                <li class="tarrif__info-item">Панель управления</li>
+                                <li class="tarrif__info-item">SEO оптимизация</li>
+                                <li class="tarrif__info-item">До 50% возврат средств в течение 30 дней</li>
+                                <li class="tarrif__info-item tarrif__info-item--active">Дополнительный функционал, который вам нужен</li>
+                            </ul>
+                            <button class="main-button js-button-decor js-button" data-target="popup-project">
+                                <span class="text">обсудить проект</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="question animation-block js-animation-show">
+                <div class="container">
+                    <div class="question__wrapper">
+                        <div class="question__info fadeInLeft">
+                            <h5 class="general-caption general-caption--presentation"></h5>
+                            <p class="main-caption-m main-caption-m--presentation"><strong>Вопросы и ответы</strong></p>
+                            <div class="question__info__text">
+                                <p>Не нашли волнующий вас вопрос? Вы можете <button class="js-button" data-target="set-question">задать его нам</button></p>
+                            </div>
+                        </div>
+                        <div class="question__container fadeInRight">
+                            <ul class="question__list">
+                                <li class="question__item">
+                                    <h4 class="question__item__caption">Будут ли поддерживать мой проект после его сдачи?</h4>
+                                    <p class="question__item__text">Раздел математики, который можно нестрого охарактеризовать как обобщение и расширение арифметики; в этом разделе числа и другие математические объекты обозначаются буквами и </p>
+                                </li>
+                                <li class="question__item">
+                                    <h4 class="question__item__caption">Будут ли править баги проекта? И нужно ли мне будет за это платить?</h4>
+                                    <p class="question__item__text">Раздел математики, который можно нестрого охарактеризовать как обобщение и расширение арифметики; в этом разделе числа и другие математические объекты обозначаются буквами и </p>
+                                </li>
+                                <li class="question__item">
+                                    <h4 class="question__item__caption">Смогу ли я сам разобраться в админке?</h4>
+                                    <p class="question__item__text">Раздел математики, который можно нестрого охарактеризовать как обобщение и расширение арифметики; в этом разделе числа и другие математические объекты обозначаются буквами и </p>
+                                </li>
+                            </ul>
+                            <button class="look-else-button js-button" data-target="question">смотреть еще</button>
+                            <div class="question-mobile-block question__info">
+                                <div class="question__info__text">
+                                    <p>Не нашли волнующий вас вопрос? <br>Вы можете задать его нам</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="general-decor-text">FAQ</p>
+                    </div>
+                </div>
+            </section>
+            <section class="call-back animation-block js-animation-show">
                 <div class="call-back__wrapper container">
                     <div class="decor-circle"></div>
-                    <div class="call-back__info">
-                        <h5 class="general-caption">детали</h5>
-                        <h2 class="main-caption-s">Обсудить проект</h2>
-                        <p class="call-back__text">Текст о том, для чего нам писать</p>
+                    <div class="call-back__info fadeInLeft">
+                        <h5 class="general-caption general-caption--presentation"></h5>
+                        <p class="main-caption-m main-caption-m--presentation"><strong>Обсудить проект</strong></p>
+                        <p class="call-back__text">Напишите нам – мы обсудим ваш проект, так же, вы можете написать нам свой вопрос и мы быстро на него ответим</p>
                         <div class="call-back__links-wrapper">
                             <a href="mailto:info@aimix.space" class="call-back__link">info@aimix.space</a>
                             <a href="tel: +38 (099) 055-33-31" class="call-back__link call-back__link-phone">+38 (099) 055-33-31</a>
                         </div>
                     </div>
-                    <div class="call-back__form-wrapper">
+                    <div class="call-back__form-wrapper fadeInRight">
                         <form action="#" class="call-back__form">
                             <div class="wrapper">
                                 <label class="input__wrapper error">
@@ -499,16 +756,7 @@
         </main>
         <footer class="footer">
             <div class="footer__wrapper container">
-                <button class="audio-button js-audio-button">
-                    <span class="audio-decor-off">
-                        <span class="audio-decor-off__item"></span>
-                        <span class="audio-decor-off__item"></span>
-                        <span class="audio-decor-off__item"></span>
-                        <span class="audio-decor-off__item"></span>
-                    </span>
-                    <span class="text"></span>
-                </button>
-                <p class="copyright">2020 AIMIX.SPACE</p>
+                <p class="copyright copyright--presentation">2020 AIMIX.SPACE</p>
                 <ul class="footer__list">
                     <li class="footer__item">
                         <a href="#" class="footer__link">Terms & Conditions</a>
@@ -541,6 +789,163 @@
                 <span class="icon-arrow"></span>
             </button>
         </div>
+        <section class="popup popup-show-img" data-target="show-img">
+            <button class="close__popup js-close"></button>
+            <div class="popup__wrapper popup__wrapper--show-img">
+                <img class="js-container-img" src="" alt="">
+            </div>
+        </section>
+        <section class="popup popup-question" data-target="question">
+            <div class="popup__wrapper">
+                <button class="close__popup js-close"></button>
+                <div class="popup-question__wrapper">
+                    <ul class="question__list">
+                        <li class="question__item">
+                            <h4 class="question__item__caption">Будут ли поддерживать мой проект после его сдачи?</h4>
+                            <p class="question__item__text">Раздел математики, который можно нестрого охарактеризовать как обобщение и расширение арифметики; в этом разделе числа и другие математические объекты обозначаются буквами и </p>
+                        </li>
+                        <li class="question__item">
+                            <h4 class="question__item__caption">Будут ли править баги проекта? И нужно ли мне будет за это платить?</h4>
+                            <p class="question__item__text">Раздел математики, который можно нестрого охарактеризовать как обобщение и расширение арифметики; в этом разделе числа и другие математические объекты обозначаются буквами и </p>
+                        </li>
+                        <li class="question__item">
+                            <h4 class="question__item__caption">Смогу ли я сам разобраться в админке?</h4>
+                            <p class="question__item__text">Раздел математики, который можно нестрого охарактеризовать как обобщение и расширение арифметики; в этом разделе числа и другие математические объекты обозначаются буквами и </p>
+                        </li>
+                        <li class="question__item">
+                            <h4 class="question__item__caption">Будут ли править баги проекта? И нужно ли мне будет за это платить?</h4>
+                            <p class="question__item__text">Раздел математики, который можно нестрого охарактеризовать как обобщение и расширение арифметики; в этом разделе числа и другие математические объекты обозначаются буквами и </p>
+                        </li>
+                        <li class="question__item">
+                            <h4 class="question__item__caption">Смогу ли я сам разобраться в админке?</h4>
+                            <p class="question__item__text">Раздел математики, который можно нестрого охарактеризовать как обобщение и расширение арифметики; в этом разделе числа и другие математические объекты обозначаются буквами и </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="popup popup-technologys" data-target="technologys">
+            <div class="popup__wrapper">
+                <button class="close__popup js-close"></button>
+                <p class="popup-technologys__caption">Технологии, которые мы используем</p>
+                <div class="technologys__logo">
+                    <img v-lazy="'./img/presentation/laravel.png'" alt="Aimix/technologys/laravel">
+                    <span class="decor-plus">+</span>
+                    <img v-lazy="'./img/presentation/vue.png'" alt="Aimix/technologys/vue">
+                </div>
+                <blockquote class="technologys__blockquote">
+                    Почему мы, скорее всего, будем рекомендовать вам вести разработку на фреймворке, а именно на Laravel? 
+                </blockquote>
+                <div class="popup-technologys__text-wrapper">
+                    <p>Начнем с того, что всю изложенную аргументацию вы можете самостоятельно проверить в поисковике. Это будет не "личное отношение", а объективные факты, подтверждение которым вы самостоятельно сможете найти в первой сотне (условно говоря) результатов в поисковой выдачи по данному вопросу</p>
+                    <ul class="popup-technologys__list">
+                        <li class="popup-technologys__item">Использование фреймворка вместо CMS это более сознательный и профессиональный подход при разработке сайта</li>
+                        <li class="popup-technologys__item">Сайт созданный на основание фреймворка пишется непосредственно под цели и задачи проекта, поэтому он лишен нагромождений и сотен тысяч строк лишнего "универсального" кода, как в CMS</li>
+                        <li class="popup-technologys__item">Вы легко сможете переделать или доработать ваш существующий сайт из маленького сайт-визитки или каталога в большой и серьезный интернет-магазин или сервис. Когда ваш сайт или бизнес будет нуждаться в масштабировании вам не будет необходимости создавать все с "чистого листа"</li>
+                        <li class="popup-technologys__item">Практически все более-менее серьезные проекты о которых вы знаете разработаны на фреймворках</li>
+                        <li class="popup-technologys__item">И еще. Один из верных способов узнать о профессионализме команды разработчиков - спросить у нех на каких технологиях они могут разработать сайт. Если в их арсенале будет только лишь CMS типа WordPress или Joomla, это с большой вероятностью говорит о том, что перед вами новички</li>
+                    </ul>
+                    <p class="popup-technologys__text-wrapper__caption">А теперь, почему именно Laravel? </p>
+                    <p>Да потому, что это один из лучших (если не лучший) современных, развивающихся и перспективнх PHP фреймворков</p>
+                    <p class="popup-technologys__text-wrapper__caption">Админка</p>
+                    <p>Описание выше, которые вы могли прочесть по поводу разницы между фреймворком и CMS это больше "внутренняя кухня"</p>
+                    <p>Если вы привыкли администрировать сайты созданные на WordPress, Drupal, Joomla, OpenCart, Prestashop или ModX, не переживайте по этому поводу – вы с такой же легкостью сможете администрировать сайт созданный на Laravel. Мы думаем, вы едва ли заметите разницу, если вы не разработчик. А скорее - все будет даже намного легче</p>
+                </div>
+                <div class="technologys__autor">
+                    <div class="technologys__autor__logo" v-lazy:background-image="'./img/presentation/autor-logo.png'"></div>
+                    <div class="wrapper">
+                        <p class="technologys__autor__name">Андрей</p>
+                        <p class="technologys__autor__position">Разработчик, php-программист</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="popup popup--call-back popup-project" data-target="popup-project">
+            <div class="popup__wrapper">
+                <button class="close__popup js-close"></button>
+                <p class="popup-caption">Вы можете связаться с нами</p>
+                <ul class="popup__social-list popup__social-list--call-back">
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">Facebook</a>
+                    </li>
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">Telegram</a>
+                    </li>
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">Viber</a>
+                    </li>
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">WhatsApp</a>
+                    </li>
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">Skype</a>
+                    </li>
+                </ul>
+                <p class="popup-caption">Или оставить свои контакты и мы свяжемся с вами</p>
+                <form action="#" class="popup__call-back-form">
+                    <label class="input__wrapper">
+                        <span class="input-caption">имя</span>
+                        <input type="text" class="main-input">
+                    </label>
+                    <label class="input__wrapper">
+                        <span class="input-caption">номер телефона</span>
+                        <input type="tel" class="main-input">
+                    </label>
+                    <label class="input__wrapper">
+                        <span class="input-caption">почта</span>
+                        <input type="email" class="main-input">
+                    </label>
+                    <button class="main-button main-button--popup js-button-decor">
+                        <span class="text">отправить</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="popup popup--call-back popup-set-question" data-target="set-question">
+            <div class="popup__wrapper">
+                <button class="close__popup js-close"></button>
+                <p class="popup-caption">Вы можете связаться с нами</p>
+                <ul class="popup__social-list popup__social-list--call-back">
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">Facebook</a>
+                    </li>
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">Telegram</a>
+                    </li>
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">Viber</a>
+                    </li>
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">WhatsApp</a>
+                    </li>
+                    <li class="popup__socila-item">
+                        <a href="#" class="popup__socila__link">Skype</a>
+                    </li>
+                </ul>
+                <p class="popup-caption">Или написать нам свой вопрос и мы ответим на него в ближайшее время</p>
+                <form action="#" class="popup__call-back-form">
+                    <label class="input__wrapper">
+                        <span class="input-caption">имя</span>
+                        <input type="text" class="main-input">
+                    </label>
+                    <label class="input__wrapper">
+                        <span class="input-caption">номер телефона</span>
+                        <input type="tel" class="main-input">
+                    </label>
+                    <label class="input__wrapper">
+                        <span class="input-caption">почта</span>
+                        <input type="email" class="main-input">
+                    </label>
+                    <label class="textarea__wrapper">
+                        <span class="input-caption">Ваш вопрос</span>
+                        <textarea class="main-textarea"></textarea>
+                    </label>
+                    <button class="main-button main-button--popup js-button-decor">
+                        <span class="text">отправить</span>
+                    </button>
+                </form>
+            </div>
+        </section>
         <div class="overlay"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

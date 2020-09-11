@@ -254,6 +254,50 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // /Header
     
+    // Show img 
+    
+    function showImg() {
+        let allButton = document.querySelectorAll('.js-show-img');
+        
+        allButton.forEach(item => {
+            item.addEventListener('click', () => {
+                let container = document.querySelector('.js-container-img');
+                let img = item.querySelector('img');
+                container.setAttribute('src', `${img.getAttribute('src')}`);
+                container.setAttribute('alt', `${img.getAttribute('alt')}`);
+            })
+        });
+    }
+    
+    showImg();
+    
+    // //Show img 
+    
+    // Animation block
+    
+    function showAnimationBlock() {
+        let allItems = document.querySelectorAll('.js-animation-show');
+        
+        console.log(window.innerHeight);
+        allItems.forEach(item => {
+            console.log(item.getBoundingClientRect().top);
+            if(item.getBoundingClientRect().top < window.innerHeight - 200) {
+                item.classList.add('show');
+            }
+        })
+    }
+    
+    setTimeout(() => {
+        showAnimationBlock();
+    }, 500);
+    
+    
+    document.addEventListener('scroll',() => {
+        showAnimationBlock();
+    })
+    
+    // Animation block 
+    
     // Footer 
     
     let maxScroll = document.body.offsetHeight - document.documentElement.clientHeight;
