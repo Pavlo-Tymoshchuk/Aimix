@@ -280,7 +280,6 @@ document.addEventListener('DOMContentLoaded', function(){
         
         console.log(window.innerHeight);
         allItems.forEach(item => {
-            console.log(item.getBoundingClientRect().top);
             if(item.getBoundingClientRect().top < window.innerHeight - 200) {
                 item.classList.add('show');
             }
