@@ -111,9 +111,40 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
         
+        let serviceDrop = event.target.closest('.js-services-drop-item');
+        
+        if(!serviceDrop) {
+            document.querySelectorAll('.js-services-drop-item').forEach(function(item){
+                item.classList.remove('active');
+            }); 
+        }
+        if(serviceDrop) {
+            if(!serviceDrop.classList.contains("active")) {
+                document.querySelectorAll('.js-services-drop-item').forEach(function(item){
+                    item.classList.remove('active');
+                });
+            }
+        }
+        
     });
     
     // //Drop
+    
+    /* Service drop */
+    
+    function showServiceDrop() {
+        let dropButtons = document.querySelectorAll('.js-services-drop-button');
+        dropButtons.forEach((item) => {
+            item.addEventListener('click', () => {
+                let wrapper = item.closest('.js-services-drop-item');
+                wrapper.classList.toggle('active');
+            });
+        });
+    }
+    
+    showServiceDrop();
+    
+    /* Service drop */
     
     // Position quiz info block
     
@@ -277,8 +308,6 @@ document.addEventListener('DOMContentLoaded', function(){
     
     function showAnimationBlock() {
         let allItems = document.querySelectorAll('.js-animation-show');
-        
-        console.log(window.innerHeight);
         allItems.forEach(item => {
             if(item.getBoundingClientRect().top < window.innerHeight - 200) {
                 item.classList.add('show');

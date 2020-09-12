@@ -34,12 +34,62 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="main-button main-button--line  js-button-decor">
-                        <span class="text">обсудить проект</span>
+                <button class="main-button main-button--line js-button-decor">
+                    <span class="text">обсудить проект</span>
                 </button>
             </div>
         </header>
         <main>
+            <section class="widget">
+                <div class="widget__wrapper">
+                    <input type="checkbox" class="menu-open" name="menu-open" id="menu-open"/>
+                    <label class="menu-open-button" for="menu-open">
+                        <span class="hamburger hamburger-1"></span>
+                        <span class="hamburger hamburger-2"></span>
+                        <span class="hamburger hamburger-3"></span>
+                    </label>
+                    
+                    <a href="#" class="menu-item">
+                        <span class="menu-item__container">
+                            <span class="icon-telegram"></span>
+                        </span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <span class="menu-item__container">
+                            <span class="icon-viber"></span>
+                        </span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <span class="menu-item__container">
+                            <span class="icon-whatsapp"></span>
+                        </span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <span class="menu-item__container">
+                            <span class="icon-e-mail"></span> 
+                        </span>
+                    </a>
+                </div>
+                <!-- filters -->
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                    <filter id="shadowed-goo">
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                        <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                        <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                        <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                        <feComposite in2="shadow" in="goo" result="goo" />
+                        <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                    </filter>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                        <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                    </filter>
+                    </defs>
+                </svg>
+            </section>
             <section class="main-banner animation-block js-animation-show">
                 <div class="main-banner__background"></div>
                 <div class="main-banner__wrapper container">
@@ -50,6 +100,9 @@
                     </div>
                     <div class="main-banner__img fadeInRight"  v-lazy:background-image="'./img/presentation/main-banner-img.png'"></div>
                     <p class="general-decor-text">e-commerce</p>
+                    <button class="main-button main-button--line js-button-decor fadeInUp">
+                        <span class="text">обсудить проект</span>
+                    </button>
                 </div>
             </section>
             <section class="offers animation-block js-animation-show">
@@ -109,7 +162,7 @@
             <section class="power animation-block js-animation-show">
                 <div class="power__wrapper container">
                     <div class="power__video fadeInLeft">
-                        <video controls="controls" autoplay="autoplay" loop="loop" muted="muted">
+                        <video autoplay="autoplay" loop="loop" muted="muted">
                             <source src="./video/presentation/coverr-wild-horses.mp4">
                         </video>
                     </div>
@@ -124,83 +177,89 @@
                     <div class="decor-circle"></div>
                     <h5 class="general-caption general-caption--presentation"></h5>
                     <p class="main-caption-m main-caption-m--presentation"><strong>Интернет-магазины от AIMIX</strong></p>
-                    <ul class="our-services__list">
-                        <li class="our-services__item fadeInLeft js-drop-item">
-                            <div class="our-services__item__inner">
-                                <p class="our-services__item__type">individual development</p>
-                                <p class="our-services__item__name"><span>Индивидуальная разработка</span><br> ‍интернет-магазина для вашего бизнеса <span>на framework</span> 💻</p>
-                                <ul class="our-services__info-list">
-                                    <li class="our-services__info-item">Возможность оформления заказа без авторизации</li>
-                                    <li class="our-services__info-item">Простота в обслуживании</li>
-                                    <li class="our-services__info-item">Высокая производительность,  выдерживание высоких нагрузок</li>
-                                    <li class="our-services__info-item">Надежность и безопасность</li>
-                                    <li><blockquote class="our-services__item__blockquote">Сайт полностью ваш - никакой кабалы с регулярными платежами и прочим. Вы всегда можете доработать сайт самостоятельно или при помощи найма сторонних программистов</blockquote></li>
-                                </ul>
-                                <button class="look-else-button js-drop-button">еще</button>
-                            </div>
-                        </li>
-                        <li class="our-services__item fadeInUp">
-                            <div class="our-services__item__inner">
-                                <p class="our-services__item__type">admin panel</p>
-                                <p class="our-services__item__name"><span>Удобная</span> и функциональная <span>административная панель</span> 🛠</p>
-                                <ul class="our-services__info-list">
-                                    <li class="our-services__info-item">Никакого программирование, полное управление контентом сайта через пользовательский интерфейс</li>
-                                    <li class="our-services__info-item">Уведомления о поступление новых заказов прямо вам в месенджер. Специально обученный бот будет держать вас в курсе всех обновлений на сайте😎</li>
-                                    <li class="our-services__info-item our-services__info-item--drop">
-                                        <span>Роли администраторов с разграничением прав доступа</span>
-                                        <div class="general-drop-wrapper js-drop-item">
-                                            <button class="general-drop-button js-drop-button" type="button"></button>
-                                            <div class="general-drop__more-info">
-                                                <span class="decor"></span>
-                                                <p>Если вам нужно сделать проект быстрее, то цена будет увеличиваться, если же у вас есть больше времени, чем мы закладываем на выполнение - вас ждет скидка</p>
+                    <div class="our-services__container">
+                        <ul class="our-services__list">
+                            <li class="our-services__item fadeInLeft js-drop-item">
+                                <div class="our-services__item__inner">
+                                    <p class="our-services__item__type">individual development</p>
+                                    <p class="our-services__item__name"><span>Индивидуальная разработка</span><br> ‍интернет-магазина для вашего бизнеса <span>на framework</span> 💻</p>
+                                    <ul class="our-services__info-list">
+                                        <li class="our-services__info-item">Возможность оформления заказа без авторизации</li>
+                                        <li class="our-services__info-item">Простота в обслуживании</li>
+                                        <li class="our-services__info-item">Высокая производительность,  выдерживание высоких нагрузок</li>
+                                        <li class="our-services__info-item">Надежность и безопасность</li>
+                                        <li class="our-services__info-item our-services__info-item--blockquote">
+                                            <blockquote class="our-services__item__blockquote">Сайт полностью ваш - никакой кабалы с регулярными платежами и прочим. Вы всегда можете доработать сайт самостоятельно или при помощи найма сторонних программистов</blockquote>
+                                        </li>
+                                    </ul>
+                                    <button class="our-services__item__button look-else-button js-drop-button"></button>
+                                </div>
+                            </li>
+                            <li class="our-services__item fadeInLeft js-drop-item">
+                                <div class="our-services__item__inner">
+                                    <p class="our-services__item__type">admin panel</p>
+                                    <p class="our-services__item__name"><span>Удобная</span> и функциональная <span>административная панель</span> 🛠</p>
+                                    <ul class="our-services__info-list">
+                                        <li class="our-services__info-item">Никакого программирование, полное управление контентом сайта через пользовательский интерфейс</li>
+                                        <li class="our-services__info-item">Уведомления о поступление новых заказов прямо вам в месенджер. Специально обученный бот будет держать вас в курсе всех обновлений на сайте😎</li>
+                                        <li class="our-services__info-item our-services__info-item--drop">
+                                            <span>Роли администраторов с разграничением прав доступа</span>
+                                            <div class="general-drop-wrapper js-services-drop-item">
+                                                <button class="general-drop-button js-services-drop-button" type="button"></button>
+                                                <div class="general-drop__more-info">
+                                                    <span class="decor"></span>
+                                                    <p>Если вам нужно сделать проект быстрее, то цена будет увеличиваться, если же у вас есть больше времени, чем мы закладываем на выполнение - вас ждет скидка</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li class="our-services__info-item">Статистика посещений и продаж прямо в админке</li>
-                                    <li class="our-services__info-item">Руководство пользователя</li>
-                                </ul>
-                                <button class="look-else-button">еще</button>
-                            </div>
-                        </li>
-                        <li class="our-services__item fadeInRight js-drop-item">
-                            <div class="our-services__item__inner">
-                                <p class="our-services__item__type">sales tools</p>
-                                <p class="our-services__item__name">Большое количество важных <span>функций</span>, <span>повышающих продажи</span> 💰</p>
-                                <ul class="our-services__info-list">
-                                    <li class="our-services__info-item">Возможность проведения акций:
-                                        <ul class="our-services__sub-list">
-                                            <li class="our-services__sub-item">система скидок</li>
-                                            <li class="our-services__sub-item">система промокодо</li>
-                                        </ul>
-                                    </li>
-                                    <li class="our-services__info-item">Функция «потерянный заказ» позволит вам контролировать незавершенные продажи и совершать допродажу или анализировать причины отказа</li>
-                                    <li class="our-services__info-item">Мультиязычность - думаете расширяться на другие рынки в дальнейшем? Создайте столько языковых версий сколько Вам необходимо, ограничений нет.</li>
-                                    <li class="our-services__info-item">Коммуникационные и социальные функции:
-                                        <ul class="our-services__sub-list">
-                                            <li class="our-services__sub-item">продвинутые отзывы, комментарии, рейтинги - повышают пользовательскую вовлеченность</li>
-                                            <li class="our-services__sub-item">списки избранных товаров и сравнения</li>
-                                            <li class="our-services__sub-item">личный кабинет пользователя</li>
-                                        </ul>
-                                    </li>
-                                    <!-- <li class="our-services__info-item">Уведомления email на почту</li>
-                                    <li class="our-services__info-item">Большой набор инструментов для маркетинга и продаж</li>
-                                    <li class="our-services__info-item">Эффективные и проработанные элементы дизайна, которые повышают конверсию магазина</li> -->
-                                </ul>
-                                <button class="look-else-button js-drop-button">еще</button>
-                            </div>
-                        </li>
-                        <li class="our-services__item fadeInUp">
-                            <div class="our-services__item__inner">
-                                <p class="our-services__item__type">SEO optimization</p>
-                                <p class="our-services__item__name"><span>SEO оптимизация</span> (это сразу дает экономию порядка $500-1500) 🔍</p>
-                                <ul class="our-services__info-list">
-                                    <li class="our-services__info-item">Семинтическая микроразметка schema.org</li>
-                                    <li class="our-services__info-item">Индивидуальный title, description, seo-текст для каждой страницы, а также для катагорий товаров, блога и прочего</li>
-                                    <li class="our-services__info-item">Оптимизация изображений</li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                                        </li>
+                                        <li class="our-services__info-item">Статистика посещений и продаж прямо в админке</li>
+                                        <li class="our-services__info-item">Руководство пользователя</li>
+                                    </ul>
+                                    <button class="our-services__item__button look-else-button js-drop-button"></button>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="our-services__list">
+                            <li class="our-services__item fadeInRight js-drop-item">
+                                <div class="our-services__item__inner">
+                                    <p class="our-services__item__type">sales tools</p>
+                                    <p class="our-services__item__name">Большое количество важных <span>функций</span>, <span>повышающих продажи</span> 💰</p>
+                                    <ul class="our-services__info-list">
+                                        <li class="our-services__info-item">Возможность проведения акций:
+                                            <ul class="our-services__sub-list">
+                                                <li class="our-services__sub-item">система скидок</li>
+                                                <li class="our-services__sub-item">система промокодо</li>
+                                            </ul>
+                                        </li>
+                                        <li class="our-services__info-item">Функция «потерянный заказ» позволит вам контролировать незавершенные продажи и совершать допродажу или анализировать причины отказа</li>
+                                        <li class="our-services__info-item">Мультиязычность - думаете расширяться на другие рынки в дальнейшем? Создайте столько языковых версий сколько Вам необходимо, ограничений нет.</li>
+                                        <li class="our-services__info-item">Коммуникационные и социальные функции:
+                                            <ul class="our-services__sub-list">
+                                                <li class="our-services__sub-item">продвинутые отзывы, комментарии, рейтинги - повышают пользовательскую вовлеченность</li>
+                                                <li class="our-services__sub-item">списки избранных товаров и сравнения</li>
+                                                <li class="our-services__sub-item">личный кабинет пользователя</li>
+                                            </ul>
+                                        </li>
+                                        <li class="our-services__info-item">Уведомления email на почту</li>
+                                        <li class="our-services__info-item">Большой набор инструментов для маркетинга и продаж</li>
+                                        <li class="our-services__info-item">Эффективные и проработанные элементы дизайна, которые повышают конверсию магазина</li>
+                                    </ul>
+                                    <button class="our-services__item__button look-else-button js-drop-button"></button>
+                                </div>
+                            </li>
+                            <li class="our-services__item our-services__item--seo fadeInRight">
+                                <div class="our-services__item__inner">
+                                    <p class="our-services__item__type">SEO optimization</p>
+                                    <p class="our-services__item__name"><span>SEO оптимизация</span> (это сразу дает экономию порядка $500-1500) 🔍</p>
+                                    <ul class="our-services__info-list">
+                                        <li class="our-services__info-item">Семинтическая микроразметка schema.org</li>
+                                        <li class="our-services__info-item">Индивидуальный title, description, seo-текст для каждой страницы, а также для катагорий товаров, блога и прочего</li>
+                                        <li class="our-services__info-item">Оптимизация изображений</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <p class="general-decor-text">our services</p>
                     <div class="our-services__text js-animation-show fadeInUpAlone">
                         <blockquote>
@@ -368,7 +427,7 @@
                         </div>
                     </div>
                     <div class="product-card__video fadeInRight">
-                        <video controls="controls" autoplay="autoplay" loop="loop" muted="muted">
+                        <video autoplay="autoplay" loop="loop" muted="muted">
                             <source src="./video/presentation/prod_card.mp4">
                         </video>
                     </div>
@@ -449,7 +508,7 @@
                         <img class="blog__img js-animation-show fadeInUpAlone" v-lazy="'./img/presentation/blog-img.png'" alt="Aimix/blog">
                     </div>
                     <div class="blog__video fadeInRight">
-                        <video controls="controls" autoplay="autoplay" loop="loop" muted="muted">
+                        <video  autoplay="autoplay" loop="loop" muted="muted">
                             <source src="./video/presentation/blog.mp4">
                         </video>
                     </div>
@@ -466,7 +525,7 @@
                         </div>
                     </div>
                     <div class="account__video js-animation-show fadeInUpAlone">
-                        <video controls="controls" autoplay="autoplay" loop="loop" muted="muted">
+                        <video  autoplay="autoplay" loop="loop" muted="muted">
                             <source src="./video/presentation/profile.mp4">
                         </video>
                     </div>
@@ -757,7 +816,7 @@
         <footer class="footer">
             <div class="footer__wrapper container">
                 <p class="copyright copyright--presentation">2020 AIMIX.SPACE</p>
-                <ul class="footer__list">
+                <ul class="footer__list footer__list--presentation">
                     <li class="footer__item">
                         <a href="#" class="footer__link">Terms & Conditions</a>
                     </li>
