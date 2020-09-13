@@ -179,11 +179,15 @@
 /* Popup project */
 
 .popup--call-back {
-    max-width: 345px;
-    padding-right: 0px;
+    max-width: 350px;
     
     .popup__wrapper {
         padding: 45px 40px 40px;
+        scrollbar-color: #e6e6e6 white;
+        
+        &::-webkit-scrollbar-thumb {
+            background: #e6e6e6;
+        }
     }
     
     .main-textarea {
@@ -241,6 +245,12 @@
     .popup__wrapper {
         padding: 20px;
     }
+    
+    .popup--call-back {
+        .popup__wrapper {
+            padding: 20px;
+        }
+    } 
     
     .popup__social-list {
         justify-content: space-between;

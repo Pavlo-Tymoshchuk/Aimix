@@ -1303,10 +1303,43 @@ video {
   filter: url(#goo);
   position: fixed;
   right: -12px;
-  bottom: 100px;
+  bottom: 20px;
   width: 50px;
   z-index: 4;
   height: 150px;
+}
+.widget__wrapper .menu-item {
+  visibility: hidden;
+}
+.widget__wrapper .menu-open:checked ~ .menu-item {
+  visibility: visible;
+}
+.widget__wrapper .menu-open:checked ~ .menu-open-button--icon .widget-icon {
+  display: none;
+}
+.widget__wrapper .menu-open:checked ~ .menu-open-button--icon .hamburger {
+  visibility: visible;
+}
+.widget__wrapper .widget-icon {
+  display: none;
+  width: 22px;
+  height: 22px;
+  background: url(../img/presentation/icon-widget.png) center / contain no-repeat;
+}
+.widget__wrapper .menu-open-button--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.widget__wrapper .menu-open-button--icon .widget-icon {
+  display: block;
+}
+.widget__wrapper .menu-open-button--icon .hamburger {
+  visibility: hidden;
+}
+.widget__wrapper .menu-open-button {
+  width: 60px;
+  height: 60px;
 }
 /* Main banner */
 .main-banner {
@@ -4179,11 +4212,14 @@ video {
 }
 /* Popup project */
 .popup--call-back {
-  max-width: 345px;
-  padding-right: 0px;
+  max-width: 350px;
 }
 .popup--call-back .popup__wrapper {
   padding: 45px 40px 40px;
+  scrollbar-color: #e6e6e6 white;
+}
+.popup--call-back .popup__wrapper::-webkit-scrollbar-thumb {
+  background: #e6e6e6;
 }
 .popup--call-back .main-textarea {
   height: 80px;
@@ -4225,6 +4261,9 @@ video {
     display: none;
   }
   .popup__wrapper {
+    padding: 20px;
+  }
+  .popup--call-back .popup__wrapper {
     padding: 20px;
   }
   .popup__social-list {

@@ -43,12 +43,13 @@
             <section class="widget">
                 <div class="widget__wrapper">
                     <input type="checkbox" class="menu-open" name="menu-open" id="menu-open"/>
-                    <label class="menu-open-button" for="menu-open">
+                    <!-- Если есть класс "menu-open-button--icon", то будет картинка -->
+                    <label class="menu-open-button menu-open-button--icon" for="menu-open">
                         <span class="hamburger hamburger-1"></span>
                         <span class="hamburger hamburger-2"></span>
                         <span class="hamburger hamburger-3"></span>
+                        <span class="widget-icon"></span>
                     </label>
-                    
                     <a href="#" class="menu-item">
                         <span class="menu-item__container">
                             <span class="icon-telegram"></span>
@@ -838,11 +839,11 @@
                 </ul>
             </div>
         </footer>
-        <div class="button-to-top">
+        <!-- <div class="button-to-top">
             <button class="to-top">
                 <span class="icon-arrow"></span>
             </button>
-        </div>
+        </div> -->
         <section class="popup popup-show-img" data-target="show-img">
             <button class="close__popup js-close"></button>
             <div class="popup__wrapper popup__wrapper--show-img">

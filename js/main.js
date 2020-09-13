@@ -250,20 +250,23 @@ document.addEventListener('DOMContentLoaded', function(){
     let wrapperToTop = document.querySelector('.button-to-top');
     let buttonToTop = document.querySelector('.to-top');
     
-    document.addEventListener('scroll', function(){
-        if(window.pageYOffset > 1000 && window.innerWidth < 1025) {
-            wrapperToTop.classList.add('show');
-        }else {
-            wrapperToTop.classList.remove('show');
-        }
-    });
-    
-    buttonToTop.addEventListener('click', function(){
-       window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+    if(buttonToTop) {
+        document.addEventListener('scroll', function(){
+            if(window.pageYOffset > 1000 && window.innerWidth < 1025) {
+                wrapperToTop.classList.add('show');
+            }else {
+                wrapperToTop.classList.remove('show');
+            }
         });
-    });
+    
+    
+        buttonToTop.addEventListener('click', function(){
+        window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
     
     // /Scroll to top
     
@@ -308,8 +311,17 @@ document.addEventListener('DOMContentLoaded', function(){
     
     function showAnimationBlock() {
         let allItems = document.querySelectorAll('.js-animation-show');
+        let windowScroll = window.innerHeight;
+        let number = 200;
+        
+        
+        if(window.innerWidth < 1020) {
+            number = 150;
+        }
+        
         allItems.forEach(item => {
-            if(item.getBoundingClientRect().top < window.innerHeight - 200) {
+            var itemOffset = item.getBoundingClientRect().top + number;
+            if(windowScroll >= itemOffset){
                 item.classList.add('show');
             }
         })

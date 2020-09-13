@@ -165,10 +165,56 @@ video {
     filter: url(#goo);
     position: fixed;
     right: -12px;
-    bottom: 100px;
+    bottom: 20px;
     width: 50px;
     z-index: 4;
     height: 150px;
+    
+    .menu-item {
+        visibility: hidden;
+    }
+    
+    .menu-open:checked {
+        ~ .menu-item {
+            visibility: visible;
+        }
+        
+        ~ .menu-open-button--icon  {
+            .widget-icon {
+                display: none;
+            }
+            
+            .hamburger {
+                visibility: visible;
+            }
+        }
+    }
+    
+    .widget-icon {
+        display: none;
+        width: 22px;
+        height: 22px;
+        background: url(../img/presentation/icon-widget.png) center / contain no-repeat;;
+    }
+    
+    .menu-open-button--icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .widget-icon {
+            display: block;
+        }
+        
+        .hamburger {
+            visibility: hidden;
+        }
+    }
+    
+    .menu-open-button {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 
